@@ -66,21 +66,36 @@ in some way.
 > > other. Finally, the colours might help distinguish skittles and M&Ms from jellybeans, but note that there are some 
 > > overlaps in colours (for example, there are red and blue jellybeans).   
 > >
-> >
-> >
-> >
+{: .challenge}
+
+Once we've defined some features that we think are helpful in telling the computer how to distinguish the different 
+types of sweets, we're ready to record some _training data_. In a training data set, we include measurements for 
+all of our relevant features for each sweet, but we also include the type of sweet we measured, i.e. whether it was a 
+skittle or one of our two types of M&Ms or a jellybean. 
+
+In machine learning, each object recorded in a training data set is called a *sample*. Each sample belongs to one of 
+several *classes* (hence the name classification; in our case the different types of sweets), and the class we record 
+for each is called a *label*.   
+
+> ## Challenge: Recording training data
+> 
+> Let's now record some data in practice! If you don't have the sweets or tools to record data, you can also 
+> use [this pre-recorded data set]().
+>
+> Pick four features you think will do well at describing your sweets, and record the value for ten sweets of 
+> each class. 
+>
+> Hint: you can use any spreadsheet programme to record your data, or you can use [this template](). 
+> The template is a `.tsv` file: this is a text file where each row corresponds to a sample, and each column 
+> to a feature. Columns are separated by tabs, hence the name (`tsv` stands for "tab-separated values").
+>
 {: .challenge}
 
 
-This tutorial owes a lot to previous machine learning tutorials at [Astro Hack Week][ahw],
-especially Iain Murray's and Gilles Louppe's [tutorials](ml2018) and Adrian Price-Whelan and David W Hogg's [tutorial](ml2017). It is also a follow-up on Gwen Eadie's [paper](mmpaper) on teaching Bayesian statistics with 
-M&Ms. Because what better way to learn statistics and machine learning through chocolate?
 
 
-[survey]: 
-[ml2018]: https://github.com/AstroHackWeek/AstroHackWeek2018/tree/master/day3_machine_learning
-[ml2017]: https://github.com/AstroHackWeek/AstroHackWeek2017/tree/master/day1
-[mmpaper]: https://www.tandfonline.com/doi/full/10.1080/10691898.2019.1604106
+[sweets_data]: 
+[sweets_template]: https://github.com/AstroHackWeek/AstroHackWeek2018/tree/master/day3_machine_learning
 
 
 {% include links.md %}
