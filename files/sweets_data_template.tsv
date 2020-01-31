@@ -1,0 +1,15 @@
+# Replace the last line starting with "#" with the names of your features. Give each feature a number 
+# and make sure to record what type of sweet you recorded!
+# Each column is separated by a tab. 
+# Make sure to delete all lines starting with "#" except for the very last one (your header) before 
+# you save the file. 
+# 
+# Example:
+#
+# Sample No	type		length		width		height		colour
+# 1		peanut M&M	1.5		2.1		0.5		blue			
+# 2		jellybean	1.2		0.8		0.7		purple
+#
+# Header:
+# Sample No     type            feature1        feature2        feature3        feature4
+
