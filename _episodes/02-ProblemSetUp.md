@@ -11,9 +11,9 @@ keypoints:
 ---
 
 You and two friends, Sarah and Michael, are planning a joint birthday party together.
-"Good news!", you tell your friends. "They had large bags of different types of sweets on special offer, so 
-I've bought enough for the party!"
-You bought several ten-pound bags of M&Ms, skittles and jellybeans. 
+"Good news!", you tell your friends. "The local supermarket had large bags of different types of sweets 
+on special offer, so I've bought enough for the party!"
+You bought ten-pound bags of peanut M&Ms, plain M&Ms, skittles and jellybeans, each. 
 But: "I poured them all all into the big storage box we have in the kitchen", you tell your friends, who 
 suddenly look horrified.
 "Oh no!", says Sarah, "My friends from the Skittles Meetup are coming! They'll be super annoyed if they find 
