@@ -1,0 +1,104 @@
+Type of Candy	has_m	has_s	length	width	height	colour
+peanut m&m	1	0	1.8	1.3	1	blue
+peanut m&m	1	0	1.6	1.3	1	blue
+peanut m&m	1	0	1.7	1.2	0.9	orange
+peanut m&m	1	0	2.3	1.1	1	blue
+peanut m&m	1	0	1.6	1.3	0.8	blue
+peanut m&m	1	0	1.7	1.1	0.9	blue
+peanut m&m	1	0	2.1	1.4	1.1	orange
+peanut m&m	0	0	1.8	1.6	1.1	yellow
+peanut m&m	1	0	2	1.4	1	orange
+peanut m&m	1	0	1.5	1.5	1.2	orange
+plain m&m	1	0	1.1	1.1	0.5	blue
+plain m&m	1	0	1.1	1.1	0.5	green
+plain m&m	1	0	1.1	1.1	0.5	orange
+plain m&m	1	0	1.1	1.1	0.5	orange
+plain m&m	1	0	1.1	1.1	0.5	orange
+plain m&m	1	0	1.1	1.1	0.5	orange
+plain m&m	1	0	1.1	1.1	0.5	orange
+plain m&m	1	0	1.1	1.1	0.5	orange
+plain m&m	1	0	1.1	1.1	0.5	blue
+plain m&m	1	0	1.1	1.1	0.5	red
+plain m&m	1	0	1.1	1.1	0.5	yellow
+plain m&m	1	0	1.1	1.1	0.5	brown
+skittles	0	1	1.1	1	0.7	red
+skittles	0	1	1.1	1.1	0.7	orange
+skittles	0	1	1.1	1.1	0.7	green
+skittles	0	1	1.1	1.1	0.7	green
+skittles	0	1	1.1	1.1	0.7	red
+skittles	0	1	1.1	1.1	0.7	red
+skittles	0	1	1.1	1.1	0.7	green
+skittles	0	1	1.1	1.1	0.7	green
+skittles	0	1	1.1	1.1	0.7	orange
+skittles	0	1	1.1	1.1	0.7	brown
+skittles	0	0	1.1	1.1	0.7	yellow
+skittles	0	0	1.1	1.1	0.7	orange
+skittles	0	0	1.1	1.1	0.7	yellow
+skittles	0	0	1.1	1.1	0.7	yellow
+skittles	0	0	1.1	1.1	0.7	yellow
+jellybeans	0	0	1.5	0.8	0.6	green
+jellybeans	0	0	1.5	0.9	0.7	green
+jellybeans	0	0	1.4	1	0.7	dark red
+jellybeans	0	0	1.5	1	0.8	white brown spots
+jellybeans	0	0	1.5	1.1	0.8	red
+jellybeans	0	0	1.6	1.1	0.7	brown
+jellybeans	0	0	1.5	1	0.9	purple
+jellybeans	0	0	1.6	1.1	0.8	white yellow spots
+jellybeans	0	0	1.5	1.1	0.9	light green
+jellybeans	0	0	1.5	1.2	0.9	beige with spots
+jellybeans	0	0	1.5	1.1	0.8	purple
+jellybeans	0	0	1.4	1.2	0.8	white grey spots
+jellybeans	0	0	1.6	1	1	pink
+jellybeans	0	0	1.4	1.1	0.9	orange
+jellybeans	0	0	1.5	1.2	1	brown
+jellybeans	0	0	1.6	1.1	0.9	blue
+jellybeans	0	0	1.3	1	0.9	white
+jellybeans	0	0	1.45	0.95	1	yellow/green with brown spots
+jellybeans	0	0	1.5	1	0.85	yellow/white
+skittles	0	1	1.1	0.7	1.1	orange
+jellybeans	0	0	1.4	0.8	0.8	green
+plain m&m	1	0	1.5	1.2	1.3	brown
+peanut m&m	1	0	2	1.4	1.5	blue
+peanut m&m	1	0	1.9	1.4	1.3	orange
+peanut m&m	0	0	1.6	1.3	1.2	orange
+peanut m&m	1	0	1.9	1.4	1.3	red
+peanut m&m	1	0	1.6	1.5	1.3	orange
+peanut m&m	1	0	1.9	1.4	1.2	orsnge
+peanut m&m	1	0	1.9	1.3	1.3	blue
+peanut m&m	1	0	1.8	1.6	1.4	orange
+peanut m&m	1	0	1.8	1.6	1.7	yellow
+jellybeans	0	0	1.5	1	0.95	yellow
+plain m&m	1	0	1.3	1.3	0.7	
+peanut m&m	1	0	2.8	1.6	1.6	green
+peanut m&m	1	0	2.29	1.75	1.50	brown
+peanut m&m	1	0	1.89	1.51	1.50	blue
+peanut m&m	1	0	2.05	1.46	1.48	green
+peanut m&m	1	0	2.04	1.82	1.71	yellow
+peanut m&m	1	0	1.95	1.60	1.37	orange
+peanut m&m	1	0	2.22	1.58	1.44	red
+plain m&m	1	0	1.35	1.28	0.61	orange
+plain m&m	1	0	1.32	1.35	0.70	brown
+plain m&m	1	0	1.40	1.43	0.73	blue
+plain m&m	1	0	1.34	1.31	0.70	green
+plain m&m	1	0	1.40	1.31	0.75	yellow
+plain m&m	1	0	1.38	1.39	0.77	brown
+plain m&m	1	0	1.32	1.39	0.72	red
+plain m&m	1	0	1.31	1.37	0.70	blue
+plain m&m	1	0	1.39	1.38	0.77	orange
+plain m&m	1	0	1.40	1.38	0.75	green
+peanut m&m	1	0	1.9	1.4	1.2	green
+peanut m&m	1	0	2.07	1.49	1.62	green
+skittles	0	1	1.2	1	1.2	red
+skittles	0	1	1.3	0.8	1.2	red
+skittles	0	1	1.3	0.9	1.2	yellow
+jellybeans	0	0	1.4	1	1	white
+jellybeans	0	0	1.3	0.8	0.8	orange
+jellybeans	0	0	1.4	1	1	pink
+skittles	0	1	1.25	1.3	0.82	yellow
+plain m&m	1	0	1.3	0.65	1.3	green
+jellybeans	0	0	1.4	1	1	white
+jellybeans	0	0	1.4	0.9	1	pink
+skittles	0	1	1.31	0.8	1.3	brown
+peanut m&m	1	0	1.95	1.35	1.43	green
+cookie	0	0	4.6	1.4	4.3	brown
+jellybeans	0	0	1.6	0.9	1	white
