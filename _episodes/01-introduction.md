@@ -3,11 +3,14 @@ title: "Introduction"
 teaching: 0
 exercises: 0
 questions:
-- "Key question (FIXME)"
+- "What is machine learning?"
+- "Where is machine learning useful?"
 objectives:
-- "First learning objective. (FIXME)"
+- "Learners should have a basic working understanding of machine learning."
+- "Learners should have a basic understanding of the problems where machine learning may be applied."
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- "Machine learning is the study of algorithms to learn patterns from data."
+- "Machine learning is ubiquitous in the modern world.""
 ---
 
 **How do we make sense of large data sets? How do we distinguish different groups of objects?**
@@ -61,7 +64,6 @@ especially Iain Murray's and Gilles Louppe's [tutorials](ml2018) and Adrian Pric
 M&Ms. Because what better way to learn statistics and machine learning through chocolate?
 
 
-[survey]: 
 [ml2018]: https://github.com/AstroHackWeek/AstroHackWeek2018/tree/master/day3_machine_learning
 [ml2017]: https://github.com/AstroHackWeek/AstroHackWeek2017/tree/master/day1
 [mmpaper]: https://www.tandfonline.com/doi/full/10.1080/10691898.2019.1604106
