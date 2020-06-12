@@ -32,7 +32,8 @@ together, whether others are not.
 > 1. First, pick two of the features you defined and gathered data for in the previous lesson. 
 > 2. Now take a large sheet of paper, and draw two perpendicular axes. Label them according to the features you selected.
 > 3. Look at your data and find the minimum and maximum for each feature across all of our training data set, then label the axes such that it spans the full range of your data set.
-> 4. Place your different sweets in different places on your graph, depending on their values of the features you selected. For this exercise, you don't need to identify each sweet with the appropriate row: just place them approximately in the right place. 
+> 4. Place your different sweets in different places on your graph, depending on their values of the features you selected. For this exercise, you don't need to identify each sweet with the appropriate row: just place them approximately in the right place. If you don't have sweets in front of you, you can look at the data from the last lesson in [this file](sweets_data), and mark on the paper where the sweet should be.
+>
 >
 > What do you see? Do your sweets all end up in different corners of the graph? Are some of them squashed together? 
 > Compare your results with your neighbour's. Did you pick similar features? Why not? How are your graphs different?
@@ -41,7 +42,7 @@ together, whether others are not.
 > >
 > > For this solution, I'm going to look at the length of a sweet compared to its height. That is, if you let it lie
 > > on an even surface, I'm going to measure the longest horizontal axis, and the vertical axis away from the surface.
-> > The data gathered during the last lesson is available in [this file](). 
+> > The data gathered during the last lesson is available in [this file](sweets_data). 
 > > Now I'm going to draw two axes on a sheet of paper, and label them "length" and "height". My measurements are 
 > > in centi-meters (cm), so that's the unit we will use. Looking at the data, I can see that the smallest value 
 > > in the "length" column is 1.1cm, the largest is 2.3cm. So it makes sense to let the x-axis, where length is 
@@ -58,9 +59,6 @@ together, whether others are not.
 > > For what we're demonstrating, you don't need to exactly identify each sweet with its row in the table.
 > > For each type of sweet we've collected data for, take a look and record the range of values we've recorded for 
 > > both the height and width, then place your sweets into the appropriate parts of the graph you drew.
-> > Here's an example:
-> > 
-> > <a href="{{ page.root }}/fig/sweets_length_height.jpg"><img src="{{ page.root }}/fig/sweets_length_height.jpg" alt="Graph of skittles, two types of M&Ms and jellybeans as a function of length (x-axis) and height (y-axis)." /></a>
 > > 
 > > You might notice that the sweets fall in different parts of the graph, and separate out quite well into their own 
 > > individual clusters. This bodes quite well for using these features and an algorithm to try and do this automatically.
@@ -73,10 +71,10 @@ together, whether others are not.
 {: .challenge}
 
 Hopefully you've found and drawn some features on a graph that separate at least some of the types of sweets out all right. 
-If they only separate out one type of sweet from the rest, but not the others from each other, that's fine for now. 
+If they only separate out one type of sweet from the rest, but not the others from each other, that's fine, too. 
 
-When we look at the graph, we can fairly immediately see whether different types of sweets end up in the same corner 
-of the graph, or if they end up in different corners. Our brain can easily parse the blank spaces between clusters of 
+When we explore the graph, we might recognize whether different types of sweets end up in the same corner 
+of the graph, or if they end up in different corners. Our brain can generally parse the blank spaces between clusters of 
 sweets, and because we also know which sweets are which, we can easily evaluate whether we've found features that 
 separate out the different types of sweets well. But how does a computer do this?
 
@@ -107,7 +105,7 @@ Let's try to draw decision boundaries for our sweets on the graph you've made!
 > > Let's look at the image from the last exercise again. If you look closely, you'll see that I've already drawn in 
 > > the decision boundaries!
 > >
-> > <a href="{{ page.root }}/fig/sweets_length_height.jpg"><img src="{{ page.root }}/fig/mixedsweets.jpg" alt="Graph of skittles, two types of M&Ms and jellybeans as a function of length (x-axis) and height (y-axis)." /></a>
+> > <a href="{{ page.root }}/fig/sweets_length_height.jpg"><img src="{{ page.root }}/fig/sweets_length_height.jpg" alt="Graph of skittles, two types of M&Ms and jellybeans as a function of length (x-axis) and height (y-axis)." /></a>
 > >
 > > In this case, the different types of sweets end up in quite distinctly different corners of the graph, so it's fairly 
 > > easy to draw straight lines between them.
@@ -120,13 +118,13 @@ algorithms, for example, that can only draw straight lines (or flat hyper-planes
 (imagine, for example, a feature for one class creating a banana shape), it can be quite hard to draw lines or planes that 
 separate all samples of one class from all samples of the other class. In this case, you need a more complex algorithm that 
 can draw curved lines or hyperplanes. There are disadvantages to using more complex algorithms, though, which we will encounter 
-in a later lesson. 
+in a later episode. 
 
 So we can draw decision boundaries by hand, but that still doesn't tell us how we can get a computer to do this.
 In the next lesson, we're going to meet our first machine learning algorithm: K-nearest neighbour!
 
 
-[sweets_data]: 
+[sweets_data]: https://github.com/dhuppenkothen/machine-learning-tutorial/tree/gh-pages/data  
 [sweets_template]: https://github.com/AstroHackWeek/AstroHackWeek2018/tree/master/day3_machine_learning
 
 
