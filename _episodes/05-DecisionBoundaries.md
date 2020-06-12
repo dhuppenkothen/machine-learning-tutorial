@@ -60,7 +60,7 @@ together, whether others are not.
 > > both the height and width, then place your sweets into the appropriate parts of the graph you drew.
 > > Here's an example:
 > > 
-> > <a href="{{ page.root }}/fig/sweets_length_height.jpg"><img src="{{ page.root }}/fig/mixedsweets.jpg" alt="Graph of skittles, two types of M&Ms and jellybeans as a function of length (x-axis) and height (y-axis)." /></a>
+> > <a href="{{ page.root }}/fig/sweets_length_height.jpg"><img src="{{ page.root }}/fig/sweets_length_height.jpg" alt="Graph of skittles, two types of M&Ms and jellybeans as a function of length (x-axis) and height (y-axis)." /></a>
 > > 
 > > You might notice that the sweets fall in different parts of the graph, and separate out quite well into their own 
 > > individual clusters. This bodes quite well for using these features and an algorithm to try and do this automatically.
@@ -68,7 +68,8 @@ together, whether others are not.
 > > than the other types of sweets are amongst each other. This is because peanut M&Ms are on the whole larger than any of 
 > > the other sweets, both in length and height. On the other hand, the plain M&Ms and the skittles have pretty similar 
 > > shapes, but the skittles are significantly thicker (corresponding to a larger height), than the plain M&Ms.
-> >
+> > {: .output}
+> {: .solution}
 {: .challenge}
 
 Hopefully you've found and drawn some features on a graph that separate at least some of the types of sweets out all right. 
@@ -109,7 +110,10 @@ Let's try to draw decision boundaries for our sweets on the graph you've made!
 > > <a href="{{ page.root }}/fig/sweets_length_height.jpg"><img src="{{ page.root }}/fig/mixedsweets.jpg" alt="Graph of skittles, two types of M&Ms and jellybeans as a function of length (x-axis) and height (y-axis)." /></a>
 > >
 > > In this case, the different types of sweets end up in quite distinctly different corners of the graph, so it's fairly 
-> > easy to draw straight lines between them. 
+> > easy to draw straight lines between them.
+> > {: .output}
+> {: .solution}
+{: .challenge} 
 
 It is useful to note that different algorithms are capable of drawing different types of decision boundaries. There are some 
 algorithms, for example, that can only draw straight lines (or flat hyper-planes). When your features make weird shapes 
