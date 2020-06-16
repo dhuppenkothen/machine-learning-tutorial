@@ -204,30 +204,6 @@ track citizens.
 {: .callout}
  
 
-## An Example
-
-Let's take a look at a concrete example. We've talked about face detection above, because it is a popular topic. In 2016, researchers published 
-a paper titled [_Automated Inference on Criminality using Face Images_](). In short, they showed a machine learning algorithm a set of images 
-of Chinese men after being arrested, and specifically selected cases where the person in question was later convicted. They also gathered a set 
-of images, largely from corporate websites, of people who have not been convicted of crimes, and trained a machine learning algorithm to predict 
-whether someone is criminal based on a photo of their face. 
-
-> ## Challenge
->
-> Is this a good idea? Could this go wrong in some way? 
-> Think about it for a minute, jot down your thoughts, and share with a partner.
->
-> > ## Solution
-> > 
-> > This is definitely a terrible idea for a wide variety of reasons.
-> >
-> >
-> >
-> >
-> >
-  
-{: .challenge}
-
 > ## Challenge
 >
 > Think about our candy-sorting task. Let's think down the ethical implication of letting a computer/robot help 
