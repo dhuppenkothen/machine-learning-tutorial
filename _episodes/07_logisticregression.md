@@ -176,6 +176,28 @@ close to 0.5 and we don't know what to do.
 > 8) Out of this array, you can now pick the first $$k$$ examples for a varying number of $$k$$. Try with $$k = 1, 2, 5, 10, 20$$, and
 > for each count the occurrence rates of the different class labels.
 
+## Multiple Features
+
+What to do if we have multiple features? In the example data set, I've collected features for length, height, width, colour, and others.
+So how can we include these in our logistic regression model?
+
+We can do so by adding more parameters and dimensions to our linear model.
+For example, for two features $$x_1$$ and $$x_2$$ (e.g. length and height), we can write down a linear model 
+
+$$
+z = a_1 x_1 + a_2 x_2 + b
+$$
+
+which we can then use as input into the logistic function in the same way we've done above. Here, $$a_1$$ and $$a_2$$ are now two different 
+parameters, which need to be estimated simultaneously.
+
+This is a bit harder to represent visually, because we have added a dimension (so our resulting plot would have to be three-dimesional).
+Instead of plotting feature versus outcome we are going to plot feature versus feature, where I've used different colours and symbols for 
+the different classes. Instead of plotting the predictions as we've done above, I'm also going to set the threshold for decision between 
+the classes at 0.5, and plot the $$\sigma(z) = 0.5$$ contour. This is, for this case, the _decision boundary_.    
+
+<a href="{{ page.root }}/fig/lr_2features.png"><img src="{{ page.root }}/fig/lr_2features.png" alt="Graph of the plain and peanut M&M data, both length and height, with the decision boundary." /></a>
+
 
 
 {% include links.md %}
