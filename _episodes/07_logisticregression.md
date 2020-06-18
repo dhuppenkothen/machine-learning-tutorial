@@ -198,6 +198,27 @@ the classes at 0.5, and plot the $$\sigma(z) = 0.5$$ contour. This is, for this 
 
 <a href="{{ page.root }}/fig/lr_2features.png"><img src="{{ page.root }}/fig/lr_2features.png" alt="Graph of the plain and peanut M&M data, both length and height, with the decision boundary." /></a>
 
+> ## Challenge
+>
+> Remember the two samples that had the same length? Can you find them on the plot? Are they easier to distinguish now? 
+>
+> > ## Solution
+> > 
+> > If you look closely, the two points at a length of 1.5 are separated quite well in width: the plain M&M is just below 1.25cm in width, 
+> > and the peanut M&M is about 1.5cm in width. Adding more descriptive features can help us separate out different classes better!
+> > However, it's also worth checking whether the new features you include actually help you separate out different classes better, or just 
+> > add noise.
+> > {: .output}
+> {: .solution}}
+{: .challenge}
 
+> ## Plot Your Features
+>
+> Plotting different features against one another can help you learn about which features might improve your classification, 
+> and which ones won't. A useful visualization for this purpose is called a [_scatterplot matrix_](scatter) (also called a pair plot or a
+> corner plot). 
+>
+{: .callout}
 
+[scatter]: https://seaborn.pydata.org/examples/scatterplot_matrix.html
 {% include links.md %}
