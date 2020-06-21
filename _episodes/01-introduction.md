@@ -1,13 +1,16 @@
 ---
-title: "Classifying Sweets: Problem Set-Up"
+title: "Introduction"
 teaching: 0
 exercises: 0
 questions:
-- "We have a box of sweets all mixed up together. What now"
+- "What is machine learning?"
+- "Where is machine learning useful?"
 objectives:
-- "Introduce learners to the problem to be solved throughout this lesson."
+- "Learners should have a basic working understanding of machine learning."
+- "Learners should have a basic understanding of the problems where machine learning may be applied."
 keypoints:
-- "Having the sweets mixed up together is bad, and we want to use machine learning to fix it."
+- "Machine learning is the study of algorithms to learn patterns from data."
+- "Machine learning is ubiquitous in the modern world."
 ---
 
 **How do we make sense of large data sets? How do we distinguish different groups of objects?**
