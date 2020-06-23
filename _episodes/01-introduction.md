@@ -108,6 +108,12 @@ This tutorial owes a lot to previous machine learning tutorials at [Astro Hack W
 especially Iain Murray's and Gilles Louppe's [tutorials](ml2018) and Adrian Price-Whelan and David W Hogg's [tutorial](ml2017). It is also a follow-up on Gwen Eadie's [paper](mmpaper) on teaching Bayesian statistics with 
 M&Ms. Because what better way to learn statistics and machine learning through chocolate?
 
+> ## Challenge
+>
+> Can you think of situations in your own life where you think implementing a 
+> machine learning model might be useful to support your decision making process?
+>
+{: .challenge}
 
 [ml2018]: https://github.com/AstroHackWeek/AstroHackWeek2018/tree/master/day3_machine_learning
 [ml2017]: https://github.com/AstroHackWeek/AstroHackWeek2017/tree/master/day1
