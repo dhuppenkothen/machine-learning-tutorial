@@ -3,7 +3,7 @@ title: "Logistic Regression"
 teaching: 0
 exercises: 0
 questions:
-- "How can we get a computer to draw decision boundaries between different types of sweets?
+- "How can we get a computer to draw decision boundaries between different types of sweets?"
 objectives:
 - "Learners develop an intuition about logistic regression as a way to model two-class problems."
 - "More advanced learners can also write their own version of the algorithm in code, and use the data they generated to classify new data points."

@@ -13,7 +13,7 @@ keypoints:
 - "Splitting the data into a training set and a test set we hold back until the end of the training phase helps us evaluate the performance of our machine learning model."
 - "The choice of evaluation metrics depends on the problem to be solved using machine learning."
 - "Different evaluation metrics optimize for different outcomes, and should be used in different circumstances."
-- "Evaluation metrics can be used jointly or be combined to give a fuller picture of performance.
+- "Evaluation metrics can be used jointly or be combined to give a fuller picture of performance."
 ---
 
 **How do we decide whether our model does a good job?**
