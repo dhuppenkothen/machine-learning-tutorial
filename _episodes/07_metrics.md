@@ -1,14 +1,19 @@
 ---
-title: "K-Nearest Neighbours"
+title: "Model Evaluation"
 teaching: 0
 exercises: 0
 questions:
-- "How can we get a computer to classify new objects using the training data we recorded?"
+- "How can we evaluate whether our model does a good job?"
+- "How can we define what a 'good job' means to us when setting up a machine learning model to solve a problem?"
 objectives:
-- "Learners understand how the K-Nearest Neighbours algorithm works conceptually"
-- "More advanced learners can also write their own version of the algorithm in code, and use the data they generated to classify new data points"
+- "Learners know how to split training data into training and test sets."
+- "Learners can state the differences between true positives, true negatives, false positives, false negatives"
+- "Learners can use these definitions to define precision, recall, specificity, and F1 score, and understand when they are relevant."
 keypoints:
-- ""
+- "Splitting the data into a training set and a test set we hold back until the end of the training phase helps us evaluate the performance of our machine learning model."
+- "The choice of evaluation metrics depends on the problem to be solved using machine learning."
+- "Different evaluation metrics optimize for different outcomes, and should be used in different circumstances."
+- "Evaluation metrics can be used jointly or be combined to give a fuller picture of performance.
 ---
 
 **How do we decide whether our model does a good job?**
