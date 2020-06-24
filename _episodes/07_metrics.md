@@ -188,7 +188,7 @@ it compares the number of true positives--the number of candies correctly identi
 of candies identified as M&Ms:
 
 $$
-\mathrm{precision} = \frac{\mathrm{true positives}}{\mathrm{true positives} + \mathrm{false positives}}
+\mathrm{precision} = \frac{\mathrm{true\, positives}}{\mathrm{true\, positives} + \mathrm{false\, positives}}
 $$
 
 This measure is especially useful if you're particularly interested in making sure that our sample is not _contaminated_. 
@@ -199,7 +199,7 @@ Conversely, the _recall_ is a measure of the fraction of actual peanut M&Ms iden
 and compares it to the number of true positives and false negatives:
 
 $$
-\mathrm{recall} = \frac{\mathrm{true positives}}{\mathrm{true positives} + \mathrm{false negatives}}
+\mathrm{recall} = \frac{\mathrm{true\, positives}}{\mathrm{true\, positives} + \mathrm{false\, negatives}}
 $$
 
 This measure is particularly useful for minimizing false negatives, that is, for making sure that all of the peanut M&Ms are correctly 
@@ -211,7 +211,7 @@ measures the proportion of other candy identified as such, by looking at the num
 of true negatives and false positives:
 
 $$
-\mathrm{specificity} = \frac{\mathrm{true negatives}}{\mathrm{true negatives} + \mathrm{false positives}}
+\mathrm{specificity} = \frac{\mathrm{true\, negatives}}{\mathrm{true\, negatives} + \mathrm{false\, positives}}
 $$
 
 Of course, in reality, we might be interested in multiple (perhaps competing) different priorities. You can always evaluate your 
@@ -221,7 +221,7 @@ to _combine_ scores into a new one. A popular version is the _F1 score_, which c
 the _harmonic mean_ between them:
 
 $$
-F1 = \frac{2 \mathrm{precision} \mathrm{recall}}{\mathrm{precision} + \mathrm{recall}}
+F1 = \frac{2\, \mathrm{precision}\, \mathrm{recall}}{\mathrm{precision} + \mathrm{recall}}
 $$
 
 This score is useful when you are looking for a metric that balances a little more effectively between making sure there are no peanut 
