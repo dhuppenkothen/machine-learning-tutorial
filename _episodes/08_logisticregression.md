@@ -64,7 +64,9 @@ function that is quite similar to the step function we used above.
 
 This is called the **logistic function**, which is defined as 
 
-$$ \sigma(z) = \frac{1}{1 + \exp{-z}} $$  .
+$$ 
+\sigma(z) = \frac{1}{1 + \exp{-z}} 
+$$ 
 
 So if we have a single feature (length), as defined above, our predicted outputs become
 
@@ -110,6 +112,7 @@ close to 0.5 and we don't know what to do.
 > > feature alone, we can therefore not confidently conclude that a sample is either one or the other.   
 > > 
 > > Here, logistic regression gives you valuable information about how confident you can be about your prediction, which is helpful in many circumstances.
+> > 
 > > {: .output}
 > {: .solution}
 {: .challenge}
@@ -133,7 +136,7 @@ close to 0.5 and we don't know what to do.
 > Can you think of situations where 0.5 might not be a good threshold? Think back to our discussion about ethics, and some of the reasons for
 > why we want to separate out peanut M&Ms and plain M&Ms in the first place. What other threshold would you implement, and why?
 >
-> ## Solution
+> > ## Solution
 > >
 > > In our episode on ethics earlier, we talked about our friends with peanut-allergies, and how making a mistake in our classification
 > > might have serious health consequences if one of these friends accidentally eat a peanut M&M misclassified as a different type of candy.
@@ -175,6 +178,7 @@ close to 0.5 and we don't know what to do.
 > distance next, etc.)
 > 8) Out of this array, you can now pick the first $$k$$ examples for a varying number of $$k$$. Try with $$k = 1, 2, 5, 10, 20$$, and
 > for each count the occurrence rates of the different class labels.
+{: .challenge}
 
 ## Multiple Features
 
@@ -208,8 +212,9 @@ the classes at 0.5, and plot the $$\sigma(z) = 0.5$$ contour. This is, for this 
 > > and the peanut M&M is about 1.5cm in width. Adding more descriptive features can help us separate out different classes better!
 > > However, it's also worth checking whether the new features you include actually help you separate out different classes better, or just 
 > > add noise.
+> > 
 > > {: .output}
-> {: .solution}}
+> {: .solution}
 {: .challenge}
 
 > ## Plot Your Features
