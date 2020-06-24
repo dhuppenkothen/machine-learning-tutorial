@@ -112,7 +112,7 @@ examples. Count all the samples that were correctly identified by the model, als
 divide them by the total number of samples in the test data set. The resulting fraction is the accuracy score: 
 
 $$
-\mathrm{accuracy} = \frac{\mathrm{True Positives}}{\mathrm{all samples}}
+\mathrm{accuracy} = \frac{\mathrm{True\, Positives}}{\mathrm{all\, samples}}
 $$
 
 > ## Challenge
