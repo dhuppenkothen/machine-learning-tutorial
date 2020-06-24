@@ -65,6 +65,7 @@ in some way.
 > > have an "s" printed on them. That might help distinguish skittles from M&Ms, but not the two types of M&Ms from each 
 > > other. Finally, the colours might help distinguish skittles and M&Ms from jellybeans, but note that there are some 
 > > overlaps in colours (for example, there are red and blue jellybeans).   
+> > 
 > > {: .output}
 > {: .solution}
 {: .challenge}
