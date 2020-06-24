@@ -159,24 +159,24 @@ close to 0.5 and we don't know what to do.
 >
 > In this challenge, we are going to write our own implementation of the logistic regression algorithm!
 > 
-> 1) First, download [the data](sweets_data) from the GitHub repository.
-> 2) Load this data in whatever programming environment you use for data analysis (I use Python, so I would use
+> 1. First, download [the data](sweets_data) from the GitHub repository.
+> 2. Load this data in whatever programming environment you use for data analysis (I use Python, so I would use
 > the Pandas library to load it).
-> 3) Take all rows that are either peanut or plain M&Ms, and store only those rows in a separate table (you can also pick another combination of two types of candy).
-> 3) Separate out the first two thirds and the last third of the new table into separate tables. The first table with
+> 3. Take all rows that are either peanut or plain M&Ms, and store only those rows in a separate table (you can also pick another combination of two types of candy).
+> 4. Separate out the first two thirds and the last third of the new table into separate tables. The first table with
 > most of the data will be our designated **training data**. For the second table, we'll assume that we don't know
 > the labels. This'll be our **target data**, which we'd like to classify.
-> 4) Then, for each of our training and target data, extract out a single feature (you can use length like I've done, or pick a different one.
-> 5) For each of our training and target data, store the *features* in a separate array from the *labels*.
-> 6) Rename the labels such that plain M&Ms are zeros, and peanut M&Ms are ones.
-> 6) Write a function that, given a feature and parameters $$a$$ and $$b$$, calculates a straight line (linear model), then squashes that straight line through a logistic function.
-> 7) Plot your feature (e.g. the length), and plot a standard logistic function (with $$a=1$$ and $$b=0$$).
-> 8) Play around with $$a$$ and $$b$$ until you find values that match our data set, note those values down, and compare with your neighbours.
-> 9) For a given height   
-> 7) Copy your array of class labels for your training data, and then order this array by the distances you
+> 5. Then, for each of our training and target data, extract out a single feature (you can use length like I've done, or pick a different one.
+> 6. For each of our training and target data, store the *features* in a separate array from the *labels*.
+> 7. Rename the labels such that plain M&Ms are zeros, and peanut M&Ms are ones.
+> 8. Write a function that, given a feature and parameters $$a$$ and $$b$$, calculates a straight line (linear model), then squashes that straight line through a logistic function.
+> 9. Plot your feature (e.g. the length), and plot a standard logistic function (with $$a=1$$ and $$b=0$$).
+> 10. Play around with $$a$$ and $$b$$ until you find values that match our data set, note those values down, and compare with your neighbours.
+> 11. For a given height   
+> 12. Copy your array of class labels for your training data, and then order this array by the distances you
 > just derived (so that the label associated to the example with the smallest distance is first, the one with the second-smallest
 > distance next, etc.)
-> 8) Out of this array, you can now pick the first $$k$$ examples for a varying number of $$k$$. Try with $$k = 1, 2, 5, 10, 20$$, and
+> 13. Out of this array, you can now pick the first $$k$$ examples for a varying number of $$k$$. Try with $$k = 1, 2, 5, 10, 20$$, and
 > for each count the occurrence rates of the different class labels.
 {: .challenge}
 
