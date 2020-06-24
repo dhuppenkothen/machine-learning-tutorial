@@ -216,12 +216,7 @@ track citizens.
 > * Is our training data set balanced (i.e. are there similar quantities of all kinds of candy)? Why would this matter? 
 > * In the last lesson, you thought about _features_. Could we mess up those features in a way that might lead to harm?
 >
->
-
-
-
-[NEED TO FINISH THIS!]
-
+{: .challenge}
 
 
 
