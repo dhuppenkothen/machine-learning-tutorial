@@ -3,7 +3,7 @@ title: "Cross-Validation"
 teaching: 0
 exercises: 0
 questions:
-- ""How can we determine whether a model generalizes to new data?"
+- "How can we determine whether a model generalizes to new data?"
 - "How do we diagnose over-/underfitting in our model?"
 objectives:
 - "Learners can apply cross-validation to their candy data set to test the validity of their algorithm."
