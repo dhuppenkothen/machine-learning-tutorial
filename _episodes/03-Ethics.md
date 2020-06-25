@@ -8,8 +8,8 @@ questions:
 - "If I do this project, who might be harmed by it?"
 - "How could the methods/tools/software I'm developing be misused for purposes I consider unethical?"
 objectives:
-- "learners understand that ethical considerations are integral to all machine learning applications"
-- "learners are able to critically question their own motives and approach to solving their problem."
+- "Learners understand that ethical considerations are integral to all machine learning applications"
+- "Learners are able to critically question their own motives and approach to solving their problem."
 - "Learners can lay out worst-case scenarios in order to design effective counter-measures to mis-use."
 keypoints:
 - "All machine learning projects should take ethical considerations into account during the planning stages and throughout the completion of the project"
@@ -27,32 +27,29 @@ Let's start by taking a look at a more formal definition of machine learning:
 >
 {: .callout}
 
-It's worth taking a moment to unpack that statement in a bit of detail. In machine learning, a 
+It's worth taking a moment to unpack this statement in more detail. In machine learning, a 
 computer performs a specific task without using explicit instructions, using algorithms and 
-statistical models. What are those _tasks_ that the computer performs? Often, that task is 
-prediction: given some information, it attempts to predict an outcome. For example, Facebook may 
-know about your age, where you live and what you usually post about, and use that to predict whether 
-you're likely to engage (e.g. click on a link) with a specific advertisement. Your bank might know 
-about the amount of money on your bank account, and reliability in paying bills, and use that to 
-predict whether they should give you a loan. 
+statistical models. Often, that task is 
+_prediction_: given some information, the machine learning algorithm attempts to predict an outcome. For example, Facebook may 
+know about your age, where you live and what you usually post about, and use this information to predict whether you're likely to engage (e.g., click on a link) with a specific advertisement. As another example, your bank might know 
+how much money is in your bank account and how reliably you pay your bills, and may use that to predict whether they should give you a loan. 
 
 Generally, computers operate on specific and rigid mathematical principles: they require explicit 
-instructions to operate. For example, you might write a rule that someone who has been posting about 
-children a lot should be shown an advertisement for toys. However, those simple rules may miss a lot 
-of context. What if the person has in fact been posting about how their neighbour's children are always 
+instructions to operate, and the user (i.e., you) must tell the computer these instructions or rules. For example, you might write a rule that someone who has been posting about 
+children at least once a day should be shown an advertisement for toys. However, this simple rule may miss a lot of context. What if the person has in fact been posting about how their neighbour's children are always 
 loud? Perhaps they should be shown advertisements for noise-cancelling headphones instead?
 If you write down rule-based logic, you have to make sure your logic includes any and all possible
 outcomes and contexts, even when you _don't know what they are_. This is obviously difficult!
 
-Machine learning goes a very different route. It aims to solve that problem by inferring the rules 
+Machine learning goes a very different route. It aims to solve that problem by _inferring_, _estimating_, or _approximating_ the rules 
 and patterns from a set of data points. For example, you might take a whole lot of social media posts
-about children, and show each poster different advertisements. If you do that many, many times, 
+about children from different people, and show each person different advertisements. If you do that many, many times, 
 you might be able to infer from the data that posters who use words like "son", "daughter", and "happy 
 birthday", should be shown toys, and posters who use the words "children" and "noise" should be 
 shown advertisements for noise-cancelling headphones. You might also learn that there's a third group 
 of posters, that you hadn't even thought of before, who post a lot about children together with 
 words like "school" and "classroom". Those are teachers, and perhaps you'd want to show them 
-advertisements of school supplies like pens and erasers.  
+advertisements of school supplies like pens and erasers. In this way, the exact rules or instructions for classifying have not been supplied, but patterns in the data have been found.
 
 How exactly we can make a computer find and describe patterns and rules in our data (i.e. the algorithms 
 and statistical models part of the definition above), we'll learn about a little bit later in this 
