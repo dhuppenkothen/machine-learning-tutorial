@@ -1,9 +1,9 @@
 ---
-title: "Classifying Sweets: Problem Set-Up"
+title: "Problem Set-up: Classifying Sweets"
 teaching: 0
 exercises: 0
 questions:
-- "We have a box of sweets all mixed up together. What now"
+- "We have a box of sweets and candies all mixed up together. What now"
 objectives:
 - "Introduce learners to the problem to be solved throughout this lesson."
 keypoints:
@@ -12,11 +12,11 @@ keypoints:
 
 You and two friends, Sarah and Michael, are planning a joint birthday party together.
 "Good news!", you tell your friends. "The local supermarket had large bags of different types of sweets 
-on special offer, so I've bought enough for the party!"
+on special offer, and I bought enough for the party!"
 
 You bought ten-pound bags of peanut M&Ms, plain M&Ms, skittles and jellybeans, each. 
 
-But: "I poured them all all into the big storage box we have in the kitchen", you tell your friends, who 
+But: "I poured them all into the big storage box we have in the kitchen", you tell your friends, who 
 suddenly look horrified.
 
 "Oh no!", says Sarah, "My friends from the Skittles Appreciation Society are coming! They'll be super annoyed if they find 
@@ -41,7 +41,7 @@ That seems like a great idea.
 
 "But how is the robot going to know which is which if we don't tell it?"
 
-Michael has an idea: "I've recently learned about machine learning! Maybe we can train a computer to distinguish 
+Michael has an idea: "I've recently learned about machine learning! Maybe we can train a computer to distinguish between
 the different types of sweets, and that computer can tell the robot into which bin each belongs."
 
 You have a plan!
