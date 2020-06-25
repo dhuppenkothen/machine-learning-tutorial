@@ -19,7 +19,7 @@ You bought ten-pound bags of peanut M&Ms, plain M&Ms, skittles and jellybeans, e
 But: "I poured them all all into the big storage box we have in the kitchen", you tell your friends, who 
 suddenly look horrified.
 
-"Oh no!", says Sarah, "My friends from the Skittles Meetup are coming! They'll be super annoyed if they find 
+"Oh no!", says Sarah, "My friends from the Skittles Appreciation Society are coming! They'll be super annoyed if they find 
 M&Ms with their skittles!"
 
 "Yeah", Michael agrees, "and we've got both peanut and plain M&Ms. What if some of our guests have a peanut 

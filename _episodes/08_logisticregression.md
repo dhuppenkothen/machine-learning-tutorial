@@ -3,7 +3,7 @@ title: "Logistic Regression"
 teaching: 0
 exercises: 0
 questions:
-- "How can we get a computer to draw decision boundaries between different types of sweets?
+- "How can we get a computer to draw decision boundaries between different types of sweets?"
 objectives:
 - "Learners develop an intuition about logistic regression as a way to model two-class problems."
 - "More advanced learners can also write their own version of the algorithm in code, and use the data they generated to classify new data points."
@@ -64,7 +64,9 @@ function that is quite similar to the step function we used above.
 
 This is called the **logistic function**, which is defined as 
 
-$$ \sigma(z) = \frac{1}{1 + \exp{-z}} $$  .
+$$ 
+\sigma(z) = \frac{1}{1 + \exp{-z}} 
+$$ 
 
 So if we have a single feature (length), as defined above, our predicted outputs become
 
@@ -110,6 +112,7 @@ close to 0.5 and we don't know what to do.
 > > feature alone, we can therefore not confidently conclude that a sample is either one or the other.   
 > > 
 > > Here, logistic regression gives you valuable information about how confident you can be about your prediction, which is helpful in many circumstances.
+> > 
 > > {: .output}
 > {: .solution}
 {: .challenge}
@@ -133,7 +136,7 @@ close to 0.5 and we don't know what to do.
 > Can you think of situations where 0.5 might not be a good threshold? Think back to our discussion about ethics, and some of the reasons for
 > why we want to separate out peanut M&Ms and plain M&Ms in the first place. What other threshold would you implement, and why?
 >
-> ## Solution
+> > ## Solution
 > >
 > > In our episode on ethics earlier, we talked about our friends with peanut-allergies, and how making a mistake in our classification
 > > might have serious health consequences if one of these friends accidentally eat a peanut M&M misclassified as a different type of candy.
@@ -156,25 +159,26 @@ close to 0.5 and we don't know what to do.
 >
 > In this challenge, we are going to write our own implementation of the logistic regression algorithm!
 > 
-> 1) First, download [the data](sweets_data) from the GitHub repository.
-> 2) Load this data in whatever programming environment you use for data analysis (I use Python, so I would use
+> 1. First, download [the data](sweets_data) from the GitHub repository.
+> 2. Load this data in whatever programming environment you use for data analysis (I use Python, so I would use
 > the Pandas library to load it).
-> 3) Take all rows that are either peanut or plain M&Ms, and store only those rows in a separate table (you can also pick another combination of two types of candy).
-> 3) Separate out the first two thirds and the last third of the new table into separate tables. The first table with
+> 3. Take all rows that are either peanut or plain M&Ms, and store only those rows in a separate table (you can also pick another combination of two types of candy).
+> 4. Separate out the first two thirds and the last third of the new table into separate tables. The first table with
 > most of the data will be our designated **training data**. For the second table, we'll assume that we don't know
 > the labels. This'll be our **target data**, which we'd like to classify.
-> 4) Then, for each of our training and target data, extract out a single feature (you can use length like I've done, or pick a different one.
-> 5) For each of our training and target data, store the *features* in a separate array from the *labels*.
-> 6) Rename the labels such that plain M&Ms are zeros, and peanut M&Ms are ones.
-> 6) Write a function that, given a feature and parameters $$a$$ and $$b$$, calculates a straight line (linear model), then squashes that straight line through a logistic function.
-> 7) Plot your feature (e.g. the length), and plot a standard logistic function (with $$a=1$$ and $$b=0$$).
-> 8) Play around with $$a$$ and $$b$$ until you find values that match our data set, note those values down, and compare with your neighbours.
-> 9) For a given height   
-> 7) Copy your array of class labels for your training data, and then order this array by the distances you
+> 5. Then, for each of our training and target data, extract out a single feature (you can use length like I've done, or pick a different one.
+> 6. For each of our training and target data, store the *features* in a separate array from the *labels*.
+> 7. Rename the labels such that plain M&Ms are zeros, and peanut M&Ms are ones.
+> 8. Write a function that, given a feature and parameters $$a$$ and $$b$$, calculates a straight line (linear model), then squashes that straight line through a logistic function.
+> 9. Plot your feature (e.g. the length), and plot a standard logistic function (with $$a=1$$ and $$b=0$$).
+> 10. Play around with $$a$$ and $$b$$ until you find values that match our data set, note those values down, and compare with your neighbours.
+> 11. For a given height   
+> 12. Copy your array of class labels for your training data, and then order this array by the distances you
 > just derived (so that the label associated to the example with the smallest distance is first, the one with the second-smallest
 > distance next, etc.)
-> 8) Out of this array, you can now pick the first $$k$$ examples for a varying number of $$k$$. Try with $$k = 1, 2, 5, 10, 20$$, and
+> 13. Out of this array, you can now pick the first $$k$$ examples for a varying number of $$k$$. Try with $$k = 1, 2, 5, 10, 20$$, and
 > for each count the occurrence rates of the different class labels.
+{: .challenge}
 
 ## Multiple Features
 
@@ -208,8 +212,9 @@ the classes at 0.5, and plot the $$\sigma(z) = 0.5$$ contour. This is, for this 
 > > and the peanut M&M is about 1.5cm in width. Adding more descriptive features can help us separate out different classes better!
 > > However, it's also worth checking whether the new features you include actually help you separate out different classes better, or just 
 > > add noise.
+> > 
 > > {: .output}
-> {: .solution}}
+> {: .solution}
 {: .challenge}
 
 > ## Plot Your Features

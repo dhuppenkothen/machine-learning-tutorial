@@ -42,7 +42,7 @@ listening to, or even providing medical diagnoses. In these types of problems, w
 whether a given example belongs to one of several discrete _classes_. In this tutorial, we will focus on 
 problems with this kind of structure. It's worth nothing, however, that machine learning can also solve problems 
 where the output variable is _continuous_, where we are trying to perhaps predict the temperature in Seattle 
-tomorrow from past weather data.  
+tomorrow from past weather data. This type of problem is called _regression_. 
 
 > ## Challenge
 >
@@ -52,11 +52,62 @@ tomorrow from past weather data.
 >
 {: .challenge}
 
+## The Process of Machine Learning & This Tutorial
+
+As mentioned above, in this tutorial, we are going to focus on the problem of predicting the 
+discrete class of an object--cat versus dog, spam versus not spam--from a set of data points, e.g. an 
+image or the collection of words in an e-mail. In machine learning, we do that by building a _model_, i.e. 
+a mathematical function that maps  between the data points (photo) and the class (cat). This requires a
+ _training data set_, i.e. a data set for which we *know* what the correct class for each example is. 
+In many cases, providing raw data (e.g. the red/green/blue values for each pixel in an image) is at best 
+an inefficient way to do machine learning. Instead, we often extract _features_, descriptive summaries of 
+the data designed to be as different as possible for our different classes. For example, if you wanted to 
+classify pictures of apples versus pictures of pears, the total number of red pixels in the image might be 
+a descriptive feature. Machine learning models are _trained_ by providing the algorithm with the training 
+data and the class labels it maps to, and adjusting the _model parameters_ (numbers are free to vary and 
+adjust the functional form of the model) until you find the parameters that best fit your data (there are 
+computer algorithms that can do that, too). Once you have built the model, you need to _evaluate_ its 
+performance: How will you know if your model does a good job? How do you know whether it is reliable? 
+Does it manage to classify all or most of the examples you showed it? Does it preferentially 
+classify some classes well, but not others?
+
+It is important to be aware that building a machine learning model involves a myriad of decisions big and 
+small that are part of the process. For example, different machine learning algorithms provide different 
+types of functions to build the desired mapping and are therefore useful for different kinds of problems. 
+Some algorithms return the predicted class of the example data you showed it. Others provide _probabilities_ 
+for all the available classes, and the user must decide how to interpret these probabilities.
+In order to build a useful machine learning model, you need to understand the _structure_ of the problem you 
+are trying to solve, and the properties of the available training data. How many classes are there? Are you 
+sure that your training data captures all the available classes? How many different examples do you have 
+for each class? In addition, each algorithm usually has different options one can adjust, and the model 
+builder must decide whether to set these based on the properties of the problem they're trying to solve 
+or include these options in the training process as parameters. 
+
+Many of the considerations and questions are ethical in nature. Classification is almost never the 
+end goal, but machine learning is very often used to support human decision making. For example, a 
+spam detection algorithm might decide whether to show the user a specific e-mail, or auto-delete it. 
+But these decisions have consequences for the people that are affected by the algorithm, and so when 
+building a system, one must think about how the decisions made based on an algorithm will affect human 
+lives.  
+
+This tutorial aims to give an introductory overview of the process of machine learning. Rather than 
+being comprehensive and mathematically rigorous, it aims to highlight the key steps that are part of 
+building a successful model, and point out the pitfalls that generally occur when building these models.
+The ethical questions related to building machine learning models--and the ways in which these things can 
+to very wrong--take a central role in this tutorial, reflecting their important position at the heart of 
+the model building process. 
+
 
 This tutorial owes a lot to previous machine learning tutorials at [Astro Hack Week][ahw],
 especially Iain Murray's and Gilles Louppe's [tutorials](ml2018) and Adrian Price-Whelan and David W Hogg's [tutorial](ml2017). It is also a follow-up on Gwen Eadie's [paper](mmpaper) on teaching Bayesian statistics with 
 M&Ms. Because what better way to learn statistics and machine learning through chocolate?
 
+> ## Challenge
+>
+> Can you think of situations in your own life where you think implementing a 
+> machine learning model might be useful to support your decision making process?
+>
+{: .challenge}
 
 [ml2018]: https://github.com/AstroHackWeek/AstroHackWeek2018/tree/master/day3_machine_learning
 [ml2017]: https://github.com/AstroHackWeek/AstroHackWeek2017/tree/master/day1

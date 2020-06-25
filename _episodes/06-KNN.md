@@ -13,13 +13,13 @@ keypoints:
 
 So we've learned about decision boundaries, and we've drawn some by hand. Let's now figure out how a computer makes a decision to put a 
 sample into one class or another. One algorithm to do that is called *K-Nearest Neighbours*. It is called that way because it takes a sample 
-whose class you don't know (say, a sweet you've just picked out of your bowl and placed on your paper), then looks at a number of samples 
+whose class you don't know (say, a candy you've just picked out of your bowl and placed on your paper), then looks at a number of samples 
 that are close to that unknown one around it, and decides on the class of the sample based on what we know about those neighbours. 
 
-Imagine you've taken a sweet from the bowl, and put it down on your paper. You then draw lines to all the other sweets already on the 
+Imagine you've taken a piece of candy from the bowl, and put it down on your paper. You then draw lines to all the other candies already on the 
 paper to mark their distances, and then pick the five sweets with the smallest distances to your new, unknown example. Since those below 
-to your training data, you know what they are! So say there are two peanut M&Ms, and three skittles. In the K-Nearest Neighbour algorithm, you 
-would now decide that the sweet you've put down on the graph is probably a skittle, too, since the majority of samples closest to it 
+to your training data, you know what they are! So say there are two peanut M&Ms, and three skittles. In the **K-Nearest Neighbour** algorithm, you 
+would now decide that the piece of candy you've put down on the graph is probably a skittle, too, since the majority of samples closest to it 
 are skittles.
 
 Why did we pick 5? In fact, this was just an example, the "N" in the algorithm's name is a place-holder for the number of neighbours you 
