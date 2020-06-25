@@ -8,6 +8,7 @@ questions:
 - "If I do this project, who might be harmed by it?"
 - "How could the methods/tools/software I'm developing be misused for purposes I consider unethical?"
 objectives:
+- "Learner's should be able to distinguish between algorithms with explicit instructions and machine learning algorithms"
 - "Learners understand that ethical considerations are integral to all machine learning applications"
 - "Learners are able to critically question their own motives and approach to solving their problem."
 - "Learners can lay out worst-case scenarios in order to design effective counter-measures to mis-use."
@@ -68,8 +69,9 @@ from data, and use these patterns to predict future outcomes.*.
 Our lives are affected every day by predictions that are made from algorithms. What news you see on social media, what advertisements 
 you are shown, what search results come up in a search engine, and major life decisions (e.g. whether you may apply for a mortgage to buy 
 a house, whether you get a job offer) is now decided upon either wholly or in part by computers, and particularly by machine learning 
-algorithms. As machine learning is being used in more and more circumstances, we, as a society, are also increasingly 
-becoming aware of all the ways technology and algorithms can be *misused* or in ways that lead to unethical and harmful outcomes. 
+algorithms. 
+
+As machine learning is used in more and more circumstances, we, as a society, are also becoming aware of the ways technology and algorithms can be *misused* or in ways that lead to unethical and harmful outcomes. 
 Even if you are a student in a field that doesn't directly involve data from humans (like my own field, astronomy), it is important 
 for you to know how your own life is affected by these decision making processes. You might also one day end up in a field where 
 you may programme algorithms that do make decisions affecting human lives, so it is important to know how to tread with care.
@@ -84,31 +86,32 @@ you may programme algorithms that do make decisions affecting human lives, so it
 
 
 You might think that there's a clear distinction: in some fields, algorithms make decisions that directly affect human lives, for 
-example in healthcare, or during college admissions. In other fields, that connection may not be as direct. Perhaps you're providing 
+example in healthcare, or during college admissions. In other fields, that connection may be less direct. Perhaps you're providing 
 a service that recognizes faces in images. This is a service that many people find useful. For example, modern photo apps can recognize 
 faces in photos, and can also recognize _different_ faces, grouping them together by person. This makes it easy to look for, for example, 
 photos of my sister. These apps often employ machine learning: taking a photo, an algorithm predicts whether there's a face in the 
 photo, and it also compares it to groups of similar faces it has already seen in your library. These algorithms are trained using large 
-sets of images that someone collected, and then annotated. You might think that that's great, if you're training your algorithm on lots of 
-images, then it should be pretty good at finding faces, shouldn't it? What ethical questions are there to think about? How could anyone 
+sets of images that someone collected, and then annotated.
+
+You might think that this sounds great --- if you're training your algorithm on lots of images, then it should be pretty good at finding faces, shouldn't it? What ethical questions are there to think about? How could anyone 
 possibly mess this up?
 
 This could be messed up, as it turns out, in very many different ways, and ethical questions are indeed important to address.
-Since machine learning algorithms all need *training data*, so examples where you know exactly what they are, which you can show to the algorithm 
-so that when it sees new, unknown examples, it knows what to predict. Where do we get that training data from?
-Well, by far the most popular, standard data set used to train image classifiers is called [ImageNet](). But how did we end up with this data set? 
-The creators, academics who needed a data set to help test computer vision algorithms, collected a large number of photos, and then asked 
-people on the internet, through crowdsourcing, to look at each image in turn, and attach labels to each category. Originally, this was meant 
+
+All machine learning algorithms need *training data*; example data where you know exactly what they are and how they are, e.g., categorized. You then show to the algorithm these data, so that when it sees new, unknown examples, it knows what to predict and classify.
+
+Where do we get that training data from? By far the most popular, standard data set used to train image classifiers is called [ImageNet](). The creators of this data set (academics who needed data to help test computer vision algorithms) collected a large number of photos, and then asked 
+people on the internet, through crowdsourcing, to look at each image in turn and attach labels to each category. Originally, this was meant 
 to classify objects, not people, but there are people in the data set, and they are labelled. Those labels, however, are not objective:
 any categorization requires a definition of those categories, and when it comes to people, those categories will be influenced by the 
 creators' social and political knowledge and views (and often, also, their ignorance). And so the ImageNet categorization contains a number of 
 categories that one would consider neutral, like "child" or "doctor", but it also contains offensive descriptions and racial slurs. 
-These are then given to a large set of people, who are asked to apply these categories to the images they see. They, too, will bring along their 
+
+These categories are given to a large set of people, who then apply these categories to the images they see. They, too, will bring along their 
 biases and prejudices, which in turn leads to images being labelled in ways that are biased. And this is the information we feed into the 
-algorithm, which cannot do anything but learn from the only information source it has. So when you pass in an image, you might end up with a 
+algorithm, which cannot do anything but learn from the only information source it has. So when you pass in an image to a machine learning algorithm to predict and categorize, you might end up with a 
 prediction that says "doctor" if you gave it the photo of a white man, and "criminal" if you gave it the image of a black man. 
-The machine learning model doesn't predict anything that approximates a fundamental truth, but biases in the labelling, where the people who 
-labelled the data set encoded their prejudices and biases.
+The machine learning model doesn't predict anything that approximates a fundamental truth, instead it contains biases in the labelling, where the people who labelled the data set encoded their prejudices and biases.
 
 The categorization, and the way it is applied to images, is only one problem in this context. ImageNet has many photos of white people, and 
 very few photos of black people. Because algorithms learn from the examples they are presented with, and learn better with more examples, 
@@ -116,7 +119,7 @@ the algorithm will be worse at predicting the presence of a black person in an i
 your training data set, and in which numbers, directly matters to the outcomes.   
 
 The creators of the ImageNet data set have since deactivated their classification scheme for people, but other data sets that have sprung up
-are similarly troubles. Creating a training data set involves neatly stuffing all of the complex, messy reality we live in into a 
+are similarly troubled. Creating a training data set involves neatly stuffing all of the complex, messy reality we live in into a 
 countable set of simple (often one-word) descriptive labels. The "Japanese Female Facial Expression" database classifies all of human emotion 
 into seven categories. Can we neatly put all of human emotion into these categories? I don't know. This dataset specifically uses Japanese 
 models. But different cultures might express emotions or reactions differently. For example, nodding means agreement in some cultures, and 
@@ -124,12 +127,11 @@ disagreement in others. The authors have made an implicit assumption about the c
 it for any purpose other than predicting emotions in images of Japanese women assumes that those expressions are universally applicable, when 
 they might not be _representative_ of the wider world.
 
-So far, we've just talked about the training data set. You might say that we're fine, as long as we have a training data set that doesn't 
-explicitly encode biases (which, I would argue, is impossible), and that is representative of the set of examples that you're trying to 
-predict. But even if you manage that, you're still not guaranteed that you don't mess it up. Machine learning encompasses a whole range of 
+So far, we've just talked about the training data set. You might say that we're fine, as long as we have an unbiased training data set (which, I would argue, is impossible). But even if you could manage a training set that is truly representative and unbiased, you're still not guaranteed to not mess it up. Machine learning encompasses a whole range of 
 different algorithms, and they make a lot of different assumptions about what the underlying data is like. For example, some might assume 
-that your data follows a particular statistical distribution, or it might assume that you have an equal number of examples for all categories. 
-You also have to define a _metric_ to tell you how well your algorithm is doing. This is usually a number that's higher if it's doing a good 
+that your data follows a particular statistical distribution, or it might assume that you have an equal number of examples for all categories.
+
+You also have to define a _metric_ to tell you how well your machine learning algorithm is doing. This is usually a number that's higher if it's doing a good 
 job, and lower if it's doing a bad job. 
 While that may sound simple, it requires a *lot* of thought about what a "good job" actually means. The simplest metric is called _accuracy_, 
 and it essentially counts the number of examples that were predicted correctly (given a training data set where you know what the outcome 
@@ -137,13 +139,14 @@ ought to be), and divides that number by the total number of examples it has see
 then your accuracy is 900/1000 = 0.9. This may seem straightforward and fair, but it's not. 
 Imagine that in your data set of 1000 photos are 290 photos of white people, 10 photos of black people, and 700 photos of things other than people.
 Let's look at these categories in turn. Imagine the algorithm didn't learn anything about people at all, and never predicted the label "person" 
-for any of them, it would mis-label 300 examples. That would give you an accuracy of 700/1000 = 0.7. Most people working on machine learning algorithms 
-would argue that that's pretty bad. Mis-labelling one in three images is pretty terrible performance, so you might go back to the drawing board and 
+for any of them, it would mis-label 300 examples. That would give you an accuracy of 700/1000 = 0.7. Most people working on machine learning algorithms would argue that that's pretty bad. Mis-labelling one in three images is pretty terrible performance, so you might go back to the drawing board and 
 try something else. That situation doesn't change very much if, for example, we just look at the white people category. 290/1000 is still a lot, so 
 the accuracy would still tell us we need to change our approach. However, imagine that because it sees so few images of black people, it now 
 classifies none of the images of black people as "person". Because you only have ten examples of that single category, your accuracy will be 
 990/1000 = 0.99. That's pretty high. A lot of machine learning people would be excited to see that, and argue that their system is working really 
 well. _But you've just created a system that is incapable of identifying an entire group of people in images!_ That's bad. 
+
+
 There are other types of metrics you can use that provide a more nuanced view, and we'll talk about those in more detail in a later episode.
 The key point here is: the choice of algorithm, and the choice of evaluation metric, _also_ encode assumptions that the creator makes about the 
 world, and consequently their biases and prejudices. In this case, we assumed that optimizing for the highest number of correct classifications 
