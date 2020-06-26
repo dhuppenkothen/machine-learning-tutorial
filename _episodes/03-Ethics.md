@@ -55,7 +55,7 @@ advertisements of school supplies like pens and erasers. In this way, the exact 
 How exactly we can make a computer find and describe patterns and rules in our data (i.e. the algorithms 
 and statistical models part of the definition above), we'll learn about a little bit later in this 
 lesson. But here's the important part to keep in mind for now: *machine learning algorithms learn patterns 
-from data, and use these patterns to predict future outcomes.*.
+from data, and use these patterns to predict future outcomes*.
 
 
 > ## Challenge
@@ -105,7 +105,8 @@ people on the internet, through crowdsourcing, to look at each image in turn and
 to classify objects, not people, but there are people in the data set, and they are labelled. Those labels, however, are not objective:
 any categorization requires a definition of those categories, and when it comes to people, those categories will be influenced by the 
 creators' social and political knowledge and views (and often, also, their ignorance). And so the ImageNet categorization contains a number of 
-categories that one would consider neutral, like "child" or "doctor", but it also contains offensive descriptions and racial slurs. 
+categories that one would consider neutral, like "child" or "doctor", but it also contains offensive descriptions and racial slurs (for a great 
+investigation of the ImageNet data set, read [Excavating AI: The Politics of Images in Machine Learning Training Sets](excavatingai). 
 
 These categories are given to a large set of people, who then apply these categories to the images they see. They, too, will bring along their 
 biases and prejudices, which in turn leads to images being labelled in ways that are biased. And this is the information we feed into the 
@@ -218,6 +219,6 @@ track citizens.
 >
 {: .challenge}
 
-
+[excavatingai]: https://www.excavating.ai
 
 {% include links.md %}
