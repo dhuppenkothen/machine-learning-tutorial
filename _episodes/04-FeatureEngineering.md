@@ -14,19 +14,19 @@ keypoints:
 - "For the current problem of classifying candy, there are a number of features related to the appearance that may be useful."
 ---
 
-So how do we approach the problem of sorting candy in practice? If you look at the picture from [Episode 2](ep2), you probably notice some difference between the different types of candy. Humans tend to be very good at classification. Many of you can probably take one look at the picture and immediately recognize that some candy are different than others. You can make categories of different candy based on their appearance, and crucially, you probably don't even have to articulate *what* exactly is different about one sweet compared to another: you can just tell. This, of course, extends past the visual domain: I could give you different types of candy to touch, and you could tell the difference by touch, too.
+### How do we approach the problem of sorting candy in practice? 
 
-So what do we do? Can we throw the candy into our robot, and the robot will just know where to sort the candy? 
-Well, no. Our ability to classify objects is trained from early childhood, and rests upon many hours of learning and experience. 
-A computer, being a machine, generally operates accordingt to *rules* and *models*: we need to tell it what to do!
-In the case of machine learning, we will tell it to optimize a *model*: this is a mathematical equation or set of 
-mathematical equations that describe how to put our candy into different categories. These mathematical equations 
-have *free parameters*: we don't know from first principles how exactly to write them down. What exactly those mathematical 
-equations are, we'll talk about in a later lesson, and see some examples from the numerous algorithms that exist. Along with the 
-mathematical description of the algorithm, we will give the 
-computer a second ingredient: candy for whom we know whether they're skittles or M&Ms or jellybeans, because you and 
-your friends like all of those so much, you've always got a couple of small bags at home. But how do we combine our candy, 
-which are real, physical objects, with the mathematical equations of our model?
+If you look at the picture from [Episode 2](ep2), you probably notice some difference between the different types of candy. Humans tend to be very good at classification. Many of you can probably take one look at the picture and immediately recognize that some candy are different than others. You can make categories of different candy based on their appearance, and crucially, you probably don't even have to articulate *what* exactly is different about one sweet compared to another: you can just tell. This, of course, extends past the visual domain: I could give you different types of candy to touch, and you could tell the difference by touch, too.
+
+Our ability to classify objects is trained from early childhood, and rests upon many hours of learning and experience. 
+A computer, on the other hand, generally operates according to *rules* and *models*. We need to tell it what to do!
+
+In the case of machine learning, we will tell the computer to optimize a *model*, a mathematical equation or set of mathematical equations that describe how to put our candy into different categories. We'll talk more about some exact mathematical equations in a later lesson. For now, it's important to understand that these mathematical equations have *free parameters*, and that we don't know from first principles how exactly to write them down. 
+
+Along with the mathematical description of the algorithm, we will give the 
+computer a second ingredient: the _training set_. The training set are data points (in our case, individual pieces of candy) for which we already know whether they're skittles, M&M's, or jellybeans.
+
+### How do we combine our candy, which are real, physical objects, with the mathematical equations of our model?
 
 We need to make explicit what our eyes and brains do automatically: find descriptors of our objects that might separate them 
 into different classes. In machine learning, we call these descriptors *features*: they are generally _summaries_ of our information 
@@ -34,7 +34,7 @@ in some way.
 
 > ## Features
 >
-> Many machine learning algorithms cannot use whatever objects--be they candy, images or musical songs--directly for the 
+> Many machine learning algorithms cannot use objects directly --be they candy, images or musical songs-- for the 
 > purpose of classification. We therefore need to define and extract *features*, i.e. descriptive summaries of these objects 
 > in order to apply these algorithms in practice.  
 >
@@ -48,13 +48,16 @@ in some way.
 > Let's take a look at the candy you've received at the start of the class (and have hopefully not eaten yet!).
 > If you have not received any candy, you can also do this exercise with the image from [Episode 2](ep2). 
 >
-> Which types of candy appear very different to you, and which are similar? 
-> What are descriptive features that help your eyes distinguish the two types of M&Ms, the skittles and the jellybeans?
-> Could you measure them and encode each in a single number per feature and sweet? Are all of the features you write 
+> Identify features of your candy and describe how you would measure them. Here are some helpful questions to get you started:
+>
+> * Which types of candy appear very different to you, and which are similar? 
+> * What are descriptive features that help your eyes distinguish the two types of M&Ms, the skittles, and the jellybeans?
+> * Could you measure these features and encode each in a single number per feature and sweet? 
+> * Are all of the features you write 
 > down able to equally distinguish all types of candy, or are some maybe good at distinguishing skittles from jellybeans, 
 > but not skittles from plain M&Ms? 
 >
-> Note down your features and also describe how you would measure them.
+
 >
 > > ## Solution
 > > 
