@@ -1,7 +1,7 @@
 ---
 title: "Model Evaluation"
-teaching: 0
-exercises: 0
+teaching: 30
+exercises: 10
 questions:
 - "How can we evaluate whether our model does a good job?"
 - "How can we define what a 'good job' means to us when setting up a machine learning model to solve a problem?"

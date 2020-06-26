@@ -1,7 +1,7 @@
 ---
 title: "Cross-Validation"
-teaching: 0
-exercises: 0
+teaching: 20
+exercises: 20
 questions:
 - "How can we determine whether a model generalizes to new data?"
 - "How do we diagnose over-/underfitting in our model?"

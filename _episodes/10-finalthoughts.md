@@ -1,7 +1,7 @@
 ---
 title: "Final Thoughts"
-teaching: 0
-exercises: 0
+teaching: 5
+exercises: 10
 questions:
 - ""
 objectives:

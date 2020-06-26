@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
-teaching: 0
-exercises: 0
+teaching: 10
+exercises: 10
 questions:
 - "What is machine learning?"
 - "Where is machine learning useful?"

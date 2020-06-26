@@ -1,7 +1,7 @@
 ---
 title: "K-Nearest Neighbours"
-teaching: 0
-exercises: 0
+teaching: 15 (+15)
+exercises: 15 (+60)
 questions:
 - "How can we get a computer to classify new objects using the training data we recorded?"
 objectives:

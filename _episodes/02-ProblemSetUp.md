@@ -1,6 +1,6 @@
 ---
 title: "Problem Set-up: Classifying Candy"
-teaching: 0
+teaching: 5
 exercises: 0
 questions:
 - "We have a box of candies all mixed up together. What now"

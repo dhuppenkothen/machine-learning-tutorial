@@ -1,7 +1,7 @@
 ---
 title: "Feature Engineering"
-teaching: 0
-exercises: 0
+teaching: 10
+exercises: 30
 questions:
 - "Can a computer classify candy as easily as a computer does?"
 - "How can we derive meaningful summaries of information from our candy to use in classification?"
@@ -56,8 +56,6 @@ in some way.
 > * Are all of the features you write 
 > down able to equally distinguish all types of candy, or are some maybe good at distinguishing skittles from jellybeans, 
 > but not skittles from plain M&Ms? 
->
-
 >
 > > ## Solution
 > > 

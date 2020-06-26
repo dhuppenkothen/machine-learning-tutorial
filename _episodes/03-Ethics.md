@@ -1,7 +1,7 @@
 ---
 title: "Incorporating Ethics into your Machine Learning Project"
-teaching: 0
-exercises: 0
+teaching: 20
+exercises: 30
 questions:
 - "Is the project I am planning to do an ethical application of machine learning?"
 - "Should I do this project in the first place?"
