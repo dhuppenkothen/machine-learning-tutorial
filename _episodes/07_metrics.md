@@ -1,6 +1,6 @@
 ---
 title: "Model Evaluation"
-teaching: 30
+teaching: 20
 exercises: 10
 questions:
 - "How can we evaluate whether our model does a good job?"

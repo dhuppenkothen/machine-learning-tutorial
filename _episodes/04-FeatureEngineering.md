@@ -1,7 +1,7 @@
 ---
 title: "Feature Engineering"
 teaching: 10
-exercises: 30
+exercises: 20
 questions:
 - "Can a computer classify candy as easily as a computer does?"
 - "How can we derive meaningful summaries of information from our candy to use in classification?"

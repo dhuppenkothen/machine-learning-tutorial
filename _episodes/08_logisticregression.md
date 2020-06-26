@@ -1,6 +1,6 @@
 ---
 title: "Logistic Regression"
-teaching: 30 (+20)
+teaching: 20 (+20)
 exercises: 20 (+60)
 questions:
 - "How can we get a computer to draw decision boundaries between different types of candies?"

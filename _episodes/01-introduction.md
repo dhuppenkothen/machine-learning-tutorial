@@ -1,6 +1,6 @@
 ---
 title: "Introduction"
-teaching: 10
+teaching: 15
 exercises: 10
 questions:
 - "What is machine learning?"

@@ -1,7 +1,7 @@
 ---
 title: "Decision Boundaries"
 teaching: 5
-exercises: 30
+exercises: 15
 questions:
 - "How can we tell whether the features we have recorded for our samples are good at separating the different classes?"
 - "How can we build visual representations of our features?"
