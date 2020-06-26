@@ -8,7 +8,7 @@ questions:
 - "Which features are better suited for classification, which are not?"
 objectives:
 - "Learners understand that in order to classify objects, many approaches require well-structured information."
-- "Learners can generate features from a set of objects."
+- "Learners should be able to identify features from a set of objects and quantify these features."
 keypoints:
 - "In order to use a computer for classification, we need to summarize the information our eyes see into a few meaningful numbers that the computer can parse."
 - "For the current problem of classifying candy, there are a number of features related to the appearance that may be useful."
