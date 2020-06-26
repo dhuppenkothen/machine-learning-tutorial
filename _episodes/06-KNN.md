@@ -1,28 +1,28 @@
 ---
 title: "K-Nearest Neighbours"
-teaching: 0
-exercises: 0
+teaching: 15 (+15)
+exercises: 15 (+60)
 questions:
 - "How can we get a computer to classify new objects using the training data we recorded?"
 objectives:
-- "Learners understand how the K-Nearest Neighbours algorithm works conceptually"
-- "More advanced learners can also write their own version of the algorithm in code, and use the data they generated to classify new data points"
+- "Learners should be able to describe in qualitative terms the K-Nearest Neighbours algorithm."
+- "More advanced learners should be able to write their own version of the algorithm in code, and use the data they generated to classify new data points"
 keypoints:
 - ""
 ---
 
-So we've learned about decision boundaries, and we've drawn some by hand. Let's now figure out how a computer makes a decision to put a 
-sample into one class or another. One algorithm to do that is called *K-Nearest Neighbours*. It is called that way because it takes a sample 
-whose class you don't know (say, a candy you've just picked out of your bowl and placed on your paper), then looks at a number of samples 
-that are close to that unknown one around it, and decides on the class of the sample based on what we know about those neighbours. 
+We've learned about decision boundaries, and we've drawn some by hand. Let's now figure out how a computer algorithm decides to put a 
+sample into one class or another. 
 
-Imagine you've taken a piece of candy from the bowl, and put it down on your paper. You then draw lines to all the other candies already on the 
-paper to mark their distances, and then pick the five sweets with the smallest distances to your new, unknown example. Since those below 
+One algorithm to do that is called *K-Nearest Neighbours*. This algorithm takes a sample whose class you don't know (say, a random candy you've picked out of a bowl), then looks at a number of samples that are close to that unknown one (its neighbours), and classifies the sample based on what we know about those neighbours. 
+
+For example, imagine you've taken a piece of candy from the bowl, and put it down on your paper. You then draw lines to all the other candies already on the 
+paper to mark their distances, and then pick the five  with the smallest distances to your new, unknown example. Since those belo
 to your training data, you know what they are! So say there are two peanut M&Ms, and three skittles. In the **K-Nearest Neighbour** algorithm, you 
 would now decide that the piece of candy you've put down on the graph is probably a skittle, too, since the majority of samples closest to it 
 are skittles.
 
-Why did we pick 5? In fact, this was just an example, the "N" in the algorithm's name is a place-holder for the number of neighbours you 
+Why did we pick 5 neighbours? This was just an example, the "K" in the algorithm's name is a place-holder for the number of neighbours you 
 choose to compare to. You could choose 1, or 100, but they'll change the behaviour of the algorithm. How to choose a good value is something 
 we're going to explore a little later in this tutorial.
  
@@ -32,12 +32,12 @@ we're going to explore a little later in this tutorial.
 > introduced here.]
 >
 >
-> Let's use our new knowledge of the K-Nearest Neighbours algorithm on our sweets. Pick a new piece of paper, 
-> and distribute two types of your sweets on a new graph (which can have the same axes as before, or different ones). 
-> Leave about a couple so behind, we'll use those in a minute. 
-> Instead of drawing decision boundaries like we did in the last episode, now pick one of the sweets you didn't 
+> Let's use our new knowledge of the K-Nearest Neighbours algorithm on our candies. Pick a new piece of paper, 
+> and distribute two types of your candies on a new graph (which can have the same axes as before, or different ones). 
+> Leave about a couple behind, we'll use those in a minute. 
+> Instead of drawing decision boundaries like we did in the last episode, now pick one of the candies you didn't 
 > put down, and locate them on the graph. 
-> Now estimate the five closest sweets to the one you've just put on your graph. Are they the same type of sweet?
+> Now estimate the five closest candies to the one you've just put on your graph. Are they the same type of candy?
 > If you choose just 1, 10, or 20 neighbours, how does your result change?  
 >
 > > ## Solution
@@ -46,21 +46,21 @@ we're going to explore a little later in this tutorial.
 > > 
 > > <a href="{{ page.root }}/fig/sweets_knn.jpg"><img src="{{ page.root }}/fig/sweets_knn.jpg" alt="Graph of skittles, two types of M&Ms and jellybeans as a function of length (x-axis) and height (y-axis)." /></a>
 > >
-> > Here I've made a graph of the length (the widest extent) and the height (the smallest extent) of our sweets and then only skittles and plain M&Ms 
+> > Here I've made a graph of the length (the widest extent) and the height (the smallest extent). I used only skittles and plain M&Ms 
 > > on the plot, because they're quite similar in overall shape, but skittles tend to be thicker. I pretended that I only have two plain M&Ms in my 
-> > training set and many more skittles then placed another sweet (the blue one on the figure) on the graph. Looking at it it seems to be much closer 
+> > training set and many more skittles. I then took another candy (the blue one circled on the figure) and placed it on the graph according to its height and length. This new candy seems to be much closer 
 > > to the two M&Ms than it is to any of the skittles, so we might assume that it's an M&M, too. In order to use our K-Nearest Neighbour algorithm 
-> > with $k = 1$, we look for the closest sweet already on the plot: one of the orange ones, which seem to be about equidistant from our blue one.
+> > with $k = 1$, we look for the closest candy already on the plot: one of the orange ones, which seem to be about equidistant from our blue one.
 > > Both of these are M&Ms, so with k=1 (and, indeed k=2) our conclusion stays the same.
 > > 
 > > Now what happens if I increase k? Let's try for k=5.   
-> > The five sweets closest to my blue one still contain the two M&Ms, but they now also contain three skittles (the green, yellow and red ones on 
-> > the figure above)! We would  now conclude that actually, our sweet is a skittle not an M&M!
+> > The five  closest to my blue one still contain the two M&Ms, but they now also contain three skittles (the green, yellow and red ones on 
+> > the figure above)! We would  now conclude that actually, our candy is a skittle not an M&M!
 > >
-> > What happened here? Well we fell into a common pitfall of machine learning: if our *training data* (the sweets we placed on the graph for which 
+> > What happened here? Well, we fell into a common pitfall of machine learning: if our *training data* (the  we placed on the graph for which 
 > > we know what they are) is very _imbalanced_, that is if I have many more of one type (skittles) than the other (M&Ms), a machine learning 
 > > algorithm might ignore the existance of examples of the smaller class (here the M&Ms) entirely. Notice how no matter where you'd place 
-> > a sweet on the graph, if k = 5 or above, the algorithm will *always* conclude that the sweet we placed is a skittle, because for any sweet the 
+> > a candy on the graph, if k = 5 or above, the algorithm will *always* conclude that the candy we placed is a skittle, because for any candy the 
 > > number of M&Ms that are closest is at most two, and the number of nearby skittles must always be at least three or above.   
 > > 
 > > So when you're doing machine learning, beware of imbalanced training data sets! We will explore this more later in the lesson.
@@ -71,9 +71,9 @@ we're going to explore a little later in this tutorial.
 
 ## The Mathematics of K-Nearest Neighbour
 
-Let's look a little more at how we can calculate our k-nearest neighbour results in practice.
+Let's look a little closer at how we can calculate our k-nearest neighbour results in practice.
 
-For this, we're going to formalize our previous intuitions a little bit more. 
+For this, we're going to formalize our previous intuitions with some maths.
 Assume you have training examples $$\{X_1, X_2, X_3, ... X_n\}$$, where each $$X_i$$ is a vector of 
 _features_ (like length, height, colour etc.) and associated labels $$\{y_1, y_2, y_3 ..., y_n\}$$ (e.g. 
 plain M&M, peanut M&M, skittle, ...). 

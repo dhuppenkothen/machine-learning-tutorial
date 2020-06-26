@@ -1,7 +1,7 @@
 ---
 title: "Model Evaluation"
-teaching: 0
-exercises: 0
+teaching: 20
+exercises: 10
 questions:
 - "How can we evaluate whether our model does a good job?"
 - "How can we define what a 'good job' means to us when setting up a machine learning model to solve a problem?"
@@ -19,22 +19,21 @@ keypoints:
 **How do we decide whether our model does a good job?**
 
 This is one of the key questions when training a machine learning algorithm. So far, we've looked at some individual examples on 
-paper. But how do we know if overall, our algorithm does a good job? We *could* try classifying some new, unknown sample (for example, 
-a handful of candy fished out of the giant box we mixed together), but they are unknown: the algorithm might predict a class, but 
-we won't know whether it predicted the _correct_ class. 
+paper. But how do we know if our algorithm does a good job overall? We *could* try classifying some new, unknown sample (for example, 
+a handful of candy fished out of the giant box we mixed together). However, even though the algorithm might predict a class, we won't know whether it predicted the _correct_ class. 
 
 ### Train-Test Splits
 
 In order to test whether the model does a good job, we can split our training data set--the data for which we know the correct 
-outcomes--into two sub-data sets. One of these we will use to train the algorithm (this will be our new training data set), the 
-other we will use to test the performance of the algorithm also called the test set. For this test set, we will pretend that we 
+outcomes--into two subsets. We will use one of these subsets to train the algorithm (this will be our new training data set), and the 
+other to test the performance of the algorithm (the test set). For the test set, we will pretend that we 
 don't know what the correct classes are, and let our newly trained system predict the classes. We can then compare the predicted
-classes with the known true classes, which can give us a sense of how often our model predicts these classes correctly.  
+classes to the known true classes, which will give us a sense of how often our model predicts these classes correctly.  
 
 
 > ## Training + Test Data
 >
-> Split the data set with known labels into two separate subsets: one you will use for training the model, the other you will
+> Split the your data set with known labels into two separate subsets: one you will use for training the model, the other you will
 > hold back and use to measure how well the model predicts unknown cases. 
 > 
 > In order to get the most accurate and unbiased performance estimate, it is advisable to keep the test data set aside until the very end
@@ -50,8 +49,10 @@ way to do that a little later in this lesson!
 >
 > There are many ways to split up a data set into a training and a test set. For example, you could split it clean in half, and use 
 > the first half for training, the second half for classification. Or you could _randomly_ select half of the data points for training, 
-> and the other half for testing. You could also use more (or less) than half to train. Can you think of situations where you would do 
-> a random split, rather than simply splitting the data set in the middle? Can you think of situations where using more or less than 50% 
+> and the other half for testing. You could also use more (or less) than half to train. 
+> * Can you think of situations where you would do 
+> a random split, rather than simply splitting the data set in the middle? 
+> * Can you think of situations where using more or less than 50% 
 > for training/testing might be useful? 
 >
 > Discuss with a partner.
@@ -63,14 +64,13 @@ way to do that a little later in this lesson!
 > > If you have a training data set like that, and you split it in the middle, you might end up in a situation where your training 
 > > data set contains all of the peanut M&Ms but none of the plain M&Ms. Because the training data set doesn't contain any plain M&Ms, 
 > > it won't know how to classify these in the test data set. Conversely, you won't know whether your model did well on the peanut M&Ms, 
-> > because there are none in the test data.
-> > It is good practice to _randomize_ your data (or subsample randomly when generating training/test data) in order to avoid effects like that
+> > because there are none in the test data. Therefore, it is good practice to _randomize_ your data (or subsample randomly when generating training/test data).
 > > 
-> > In addition, there is a balance to be found between the amount of training and the amount of test data. You want to show the algorithm 
-> > as much training data as possible, so that the resulting model has seen as many different examples from one class as available. 
+> > There is also a balance to be found between the amount of training and the amount of test data. You want to show the algorithm 
+> > as much training data as possible, so that the resulting model has seen many different variations within each class.
 > > On the other hand, if your test data set is too small, it might not contain examples from all of the classes, or have too few examples 
 > > to reliably establish performance. Usually, people try to use somewhat more data for training than testing: 70% training/30% test data is 
-> > a common split, but the details often depend on the problem at hand (and the overall amount of training data that's available to you).
+> > a common split, but the details often depend on the problem at hand (and the overall amount of training data that's available).
 > > {: .output} 
 > {: .solution}
 {: .challenge}
@@ -83,11 +83,12 @@ classification on the test data set, often defined such that a large number mean
 indicates a bad model. 
 
 You might think that there is a universally accepted standard way to estimate performance, but 
-the actual measure you want to use is deeply problem-dependent. Let's illustrate with an example. Imagine you have a friend who is 
+the actual measure you want to use is deeply problem-dependent. Let's illustrate with an example. 
+
+Imagine you have a friend who is 
 very allergic to peanuts, who is coming to your party. Your housemate also has a couple of friends coming who belong to the Skittles 
-Appreciation Society and absolutely abhor M&Ms. While you don't want to offend those friends, you also decide that not accidentally 
-giving your friend with the allergy peanuts is really important, because that friend's health might be in serious trouble. As a result, 
-you decide that you need to prioritize correctly identifying peanut M&Ms over all other classes, which means that you need an evaluation 
+Appreciation Society and absolutely abhor M&Ms. While you don't want to offend those friends, more importantly you don't want to accidentally 
+give your friend with the peanut allergy a candy containing peanuts. As a result, you decide that you need to prioritize correctly identifying peanut M&Ms over all other classes, which means that you need an evaluation 
 metric that reflects that priority.
 
 
@@ -129,13 +130,13 @@ $$
 > >
 > >
 > > To see how this works, let's take a look at an example: in our introduction, we mentioned 
-> > that we bought the same amount of different candies by _weight_. However, because skittles, plain M&Ms and jellybeans
+> > that we bought the same amount of different candies by _weight_. However, because skittles, plain M&Ms, and jellybeans
 > > are much lighter than peanut M&Ms, we might have much fewer peanut M&Ms in our data set by *number*.
 > > Let's assume an extreme case: We have only 5% peanut M&Ms, everything else is other types of candy. If we set up a 
 > > binary classification (peanut M&Ms versus others), then our examples are severely _imbalanced_: out of a 100 candies, 
 > > only five are peanut M&Ms. What would happen if we set up an algorithm that just classified *everything* as *not* a 
 > > peanut M&M? Out of a hundred examples, it would only get five wrong, i.e. the accuracy is 95/100 = 0.95. 
-> > Only five! you might say, and conclude that it's a pretty good classifier. However, it's not if the peanut M&Ms are 
+> > Only five! you might say, and conclude that it's a pretty good classifier. However, it's not a good classifier if the peanut M&Ms are 
 > > what you really care about. In this case, accuracy gives you a very misleading measure of performance.
 > > {: .output}
 > {: .solution}
@@ -149,11 +150,9 @@ $$
 >
 {: .callout}
 
-Accuracy is probably not the best metric to use if we want to make sure that our friend doesn't accidentally get any 
-peanut M&Ms. So what other options are there? So far, we've only talked about the _true positives_, i.e. the peanut M&Ms 
-correctly identified as such, and compared them to the total number of examples. In the example problem, we're much more 
-interested in the number of _false negatives_, however. These are examples that are actually peanut M&Ms, but classified as 
-other candy. To complete the number of possible categories a classified example could fall into, we also need to define 
+Accuracy is probably not the best metric to use if we want to make sure that our friend doesn't accidentally eat peanut M&Ms. So, what other options are there? 
+
+In the example problem, we're much more interested in the number of _false negatives_ ---  These are examples that are actually peanut M&Ms, but classified as other candy. To complete the number of possible categories a classified example could fall into, we also need to define 
 _true negatives_, the total number of other candy that was correctly identified as such, and the _false positives_, the number 
 of other candies falsely identified as peanut M&Ms. Take together, this yields the following table:
 
@@ -178,11 +177,10 @@ Here, the columns denote the true class of a sample, and the rows denote the cla
 > {: .solution}
 {: .challenge}
 
-It is important to note that it is often impossible to optimize for all possible cases. That is, if we optimize a 
-machine learning model of minimizing false negatives, we might get more false positives as a result, and the other way 
-around.
+*Special Note:* that it is often impossible to optimize for all possible cases. That is, if we optimize a machine learning model of minimizing false negatives, we might get more false positives as a result, and the other way around.
 
 We can now define a number of other metrics based on these quantities, each of which are useful for different circumstances. 
+
 The _precision_ is a measure that tells us how many of the candies we identified as peanut M&Ms are actually peanut M&Ms. That is, 
 it compares the number of true positives--the number of candies correctly identified as M&Ms--and compares it to the total number 
 of candies identified as M&Ms:
@@ -191,7 +189,7 @@ $$
 \mathrm{precision} = \frac{\mathrm{true\, positives}}{\mathrm{true\, positives} + \mathrm{false\, positives}}
 $$
 
-This measure is especially useful if you're particularly interested in making sure that our sample is not _contaminated_. 
+This measure is especially useful if you're interested in making sure that our sample is not _contaminated_. 
 Perhaps you have a friend who only eats peanut M&Ms, and gets really annoyed if they're given anything else. In this case, you 
 might want to consider precision as a score.
 
