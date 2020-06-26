@@ -3,7 +3,7 @@ title: "Logistic Regression"
 teaching: 0
 exercises: 0
 questions:
-- "How can we get a computer to draw decision boundaries between different types of sweets?"
+- "How can we get a computer to draw decision boundaries between different types of candies?"
 objectives:
 - "Learners develop an intuition about logistic regression as a way to model two-class problems."
 - "More advanced learners can also write their own version of the algorithm in code, and use the data they generated to classify new data points."
@@ -13,13 +13,12 @@ keypoints:
 ---
 
 K-Nearest Neighbours is just one out of many different machine learning algorithms (there'll be some resources for further reading at the 
-end of the tutorial). Let's take a look at a second, very different algorithms, to get a feeling for how different algorithms work.
+end of the tutorial). Let's take a look at a second, very different algorithm, to get a feeling for how different algorithms work.
 
-For this particular algorithm, we're going to simplify the problem to start: we're going to look at trying to distinguish plain M&Ms from 
-peanut M&Ms (and leave out skittles and jellybeans for now), and we're going to look at a single feature: the longest extent of each sweet, 
+For this particular algorithm, we're going to simplify the initial problem. We're going to try to distinguish plain M&Ms from peanut M&Ms only, and we're going to look at a single feature: the longest extent of each candy, 
 which I've labelled "length" in my data set. 
 
-To prepare we're also going to make one change in our data set. When I recorded my measurements, I wrote down what each sweet I measured was 
+To prepare we're also going to make one change in our data set. When I recorded my measurements, I wrote down what each candy I measured was 
 in words, e.g. "plain M&M", and "peanut M&M". This is great, because it's descriptive! However, for this algorithm to work, we're going to 
 need to transform our labels into numbers, so we're going to do a substitution. Plain M&Ms will be labelled with "0", peanut M&Ms will be 
 labelled with "1" (the reason for these numbers will become clear in a moment). Once we've done that, we can now plot the data for our 
@@ -57,21 +56,18 @@ So what is the simplest differentiable model we could use? Well, the simplest mo
 
  <a href="{{ page.root }}/fig/lr_straightline.png"><img src="{{ page.root }}/fig/lr_straightline.png" alt="Graph of data points for plain and peanut M&Ms, using length on the x-axis, with a straight line function fit through the data points." /></a> 
 
-That's a simpler model, but not one that fits our data particularly well: the function does not really go through the data points. The reason for that is that 
-the straight line model predicts a real value $$z$$ for each input $$x$$ (which is our length feature here). But our outputs aren't continuous real values: 
-they're either zeros or ones! There's a trick we can employ to take that straight line model above, and make it output mostly zeros and ones, and produce a 
-function that is quite similar to the step function we used above. 
+That's a simpler model, but not one that fits our data particularly well; the function does not really go through the data points. The reason is that the straight line model predicts a real value $$z$$ for each input $$x$$ (the measured length feature), but our outputs aren't continuous real values --- they're either zeros or ones! There's a trick we can employ to take that straight line model above, and make it output mostly zeros and ones, and produce a function that is quite similar to the step function we used above. 
 
 This is called the **logistic function**, which is defined as 
 
 $$ 
-\sigma(z) = \frac{1}{1 + \exp{-z}} 
+\sigma(z) = \frac{1}{1 + \exp{(-z)}} 
 $$ 
 
 So if we have a single feature (length), as defined above, our predicted outputs become
 
 $$
-y = \frac{1}{1 + \exp{ax + b}} 
+y = \frac{1}{1 + \exp{(ax + b)}} 
 $$
 
 What does this function look like for $$a=1$$ and $$b=0$$?
@@ -85,12 +81,10 @@ fit through the data:
 <a href="{{ page.root }}/fig/lr_logreg_data.png"><img src="{{ page.root }}/fig/lr_logreg_data.png" alt="Graph of the plain and peanut M&M data, with a  logistic function." /></a>
 
 Overall this does much better than the straight line at fitting through our data points, though it doesn't quite as well as the step function. 
-If you look closely, you can see tha tin my data set there's at least one peanut M&M and one plain M&M that have the same recorded length of 1.5cm.
+If you look closely, you can see that in my data set there's at least one peanut M&M and one plain M&M that have the same recorded length of 1.5cm.
 This means that with this single feature, it is impossible to distinguish whether your candy is a plain or peanut M&M if it's exactly 1.5cm long.
 
-If our candies have lengths that are far away from that value, the function above will predict either 0 or 1, or a value close to those numbers, and we 
-can confidently predict that it's either a plain or peanut M&M. But waht if the height you've measured is close to 1.5? The function will now predict something 
-close to 0.5 and we don't know what to do.
+If our candies have lengths that are far away 1.5cm, then the function will predict values close to either 0 or 1, and we can confidently predict that the candies are either plain or peanut. However, if the length you've measured is close to 1.5 then the function will predict something close to 0.5, making it nearly impossible to safely classify.
 
 > ## Challenge
 >
@@ -129,9 +123,7 @@ close to 0.5 and we don't know what to do.
 
 > ## Challenge
 >
-> In the previous challenge, we said that typically, model builders will set a threshold at a predicted value of 0.5 and set all samples with 
-> smaller predictions to belong to class 0, and all samples with larger predictions to class 1. That is a deliberate choice, and you could 
-> make a different one!
+> In the previous challenge, we said that typically, model builders will set a threshold at a predicted value of 0.5. That is a deliberate choice, and you could make a different one!
 >
 > Can you think of situations where 0.5 might not be a good threshold? Think back to our discussion about ethics, and some of the reasons for
 > why we want to separate out peanut M&Ms and plain M&Ms in the first place. What other threshold would you implement, and why?
@@ -139,16 +131,14 @@ close to 0.5 and we don't know what to do.
 > > ## Solution
 > >
 > > In our episode on ethics earlier, we talked about our friends with peanut-allergies, and how making a mistake in our classification
-> > might have serious health consequences if one of these friends accidentally eat a peanut M&M misclassified as a different type of candy.
-> > Protection of these friends is really important to us, whereas misclassifying a plain M&M as a peanut M&M is less severe. Someone might 
-> > be disappointed not to get a peanut, but they can just take another.
+> > might have serious health consequences if one of these friends accidentally ate a peanut M&M misclassified as a different type of candy.
+> > Protection our friends is really important; we don't want to missclassify any peanut M&M's as plain ones, whereas misclassifying a plain M&M as a peanut M&M is less severe. 
+
 > > 
-> > Thus, because we're quite happy to misclassify plain M&Ms as peanut M&Ms, but definitely want to avoid the reverse case, we could consider 
-> > setting the threshold at a much higher value. Perhaps as high as 0.999. In this case, many plain M&Ms might get misclassified as peanut M&Ms, 
-> > but only one in a thousand peanut M&Ms should get misclassified as a plain M&M. That seems much safer!
+> > Thus, we could consider setting the threshold at a much higher value. Perhaps as high as 0.999. In this case, many plain M&Ms might get misclassified as peanut M&Ms, but only one in a thousand peanut M&Ms should get misclassified as a plain M&M. That seems much safer!
 > > 
 > > As we have said in the ethics lesson, it is important to always check your assumptions and consider the possibly unintended, harmful outcomes of 
-> > making mistakes in your classification.  
+> > making mistakes in your classification.
 > > 
 > > {: .output} 
 > {: .solution}
@@ -182,11 +172,9 @@ close to 0.5 and we don't know what to do.
 
 ## Multiple Features
 
-What to do if we have multiple features? In the example data set, I've collected features for length, height, width, colour, and others.
-So how can we include these in our logistic regression model?
+### How can we handle multiple features? 
 
-We can do so by adding more parameters and dimensions to our linear model.
-For example, for two features $$x_1$$ and $$x_2$$ (e.g. length and height), we can write down a linear model 
+In the example data set, I've collected features for length, height, width, colour, and others. We can include these extra features by adding more parameters and dimensions to our linear model. For example, for two features $$x_1$$ and $$x_2$$ (e.g. length and height), we can write down a linear model 
 
 $$
 z = a_1 x_1 + a_2 x_2 + b
@@ -195,8 +183,7 @@ $$
 which we can then use as input into the logistic function in the same way we've done above. Here, $$a_1$$ and $$a_2$$ are now two different 
 parameters, which need to be estimated simultaneously.
 
-This is a bit harder to represent visually, because we have added a dimension (so our resulting plot would have to be three-dimesional).
-Instead of plotting feature versus outcome we are going to plot feature versus feature, where I've used different colours and symbols for 
+This is a bit harder to represent visually, because we have added a dimension. Instead of plotting feature versus outcome we are going to plot feature versus feature, where I've used different colours and symbols for 
 the different classes. Instead of plotting the predictions as we've done above, I'm also going to set the threshold for decision between 
 the classes at 0.5, and plot the $$\sigma(z) = 0.5$$ contour. This is, for this case, the _decision boundary_.    
 
@@ -204,7 +191,7 @@ the classes at 0.5, and plot the $$\sigma(z) = 0.5$$ contour. This is, for this 
 
 > ## Challenge
 >
-> Remember the two samples that had the same length? Can you find them on the plot? Are they easier to distinguish now? 
+> Where on the plot are the two samples that had the same length? Are they easier to distinguish now? 
 >
 > > ## Solution
 > > 
@@ -220,7 +207,7 @@ the classes at 0.5, and plot the $$\sigma(z) = 0.5$$ contour. This is, for this 
 > ## Plot Your Features
 >
 > Plotting different features against one another can help you learn about which features might improve your classification, 
-> and which ones won't. A useful visualization for this purpose is called a [_scatterplot matrix_](scatter) (also called a pair plot or a
+> and which ones won't. A useful visualization for this purpose is called a [_scatterplot matrix_](scatter) (also called a pairs plot or a
 > corner plot). 
 >
 {: .callout}
