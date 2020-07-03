@@ -97,7 +97,7 @@ where $$I$$ is the _indicator function_ ($$I = 1$$ if $$i=j$$, else $$I = 0$$).
 >
 > In this challenge, we are going to write our own implementation of the k-nearest neighbours algorithm!
 > 
-> 1) First, download [the data](sweets_data) from the GitHub repository. 
+> 1) First, download [the data][sweets_data] from the GitHub repository. 
 > 2) Load this data in whatever programming environment you use for data analysis (I use Python, so I would use 
 > the Pandas library to load it). 
 > 3) Separate out the first two thirds and the last third of the table into separate tables. The first table with 

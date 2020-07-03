@@ -100,13 +100,13 @@ This could be messed up, as it turns out, in very many different ways, and ethic
 
 All machine learning algorithms need *training data*; example data where you know exactly what they are and how they are, e.g., categorized. You then show to the algorithm these data, so that when it sees new, unknown examples, it knows what to predict and classify.
 
-Where do we get that training data from? By far the most popular, standard data set used to train image classifiers is called [ImageNet](). The creators of this data set (academics who needed data to help test computer vision algorithms) collected a large number of photos, and then asked 
+Where do we get that training data from? By far the most popular, standard data set used to train image classifiers is called [ImageNet](http://www.image-net.org). The creators of this data set (academics who needed data to help test computer vision algorithms) collected a large number of photos, and then asked 
 people on the internet, through crowdsourcing, to look at each image in turn and attach labels to each category. Originally, this was meant 
 to classify objects, not people, but there are people in the data set, and they are labelled. Those labels, however, are not objective:
 any categorization requires a definition of those categories, and when it comes to people, those categories will be influenced by the 
 creators' social and political knowledge and views (and often, also, their ignorance). And so the ImageNet categorization contains a number of 
 categories that one would consider neutral, like "child" or "doctor", but it also contains offensive descriptions and racial slurs (for a great 
-investigation of the ImageNet data set, read [Excavating AI: The Politics of Images in Machine Learning Training Sets](excavatingai). 
+investigation of the ImageNet data set, read [Excavating AI: The Politics of Images in Machine Learning Training Sets][excavatingai]. 
 
 These categories are given to a large set of people, who then apply these categories to the images they see. They, too, will bring along their 
 biases and prejudices, which in turn leads to images being labelled in ways that are biased. And this is the information we feed into the 
@@ -166,7 +166,7 @@ This is important, because there is a strong narrative around the use of data an
 when done really carefully, these can occasionally be *less biased*, there are now many examples where researchers and technologists have claimed 
 that their machine learning system would make a process unbiased, only to be shown horribly wrong.
 This view of algorithms and data sets as objective representations of the world, goes hand in hand with a 
-concept that [Meredith Broussard]() calls *technochauvinism* in her book, [_Artificial Unintelligence_](). This term refers to a mindset that says 
+concept that [Meredith Broussard][mbroussard] calls *technochauvinism* in her book, [_Artificial Unintelligence_][artificialunintelligence]. This term refers to a mindset that says 
 that algorithms are superior to human judgment, and argues that technology is always the best strategy. Before you even start building, it's worth 
 thinking about whether technology is really the right solution to the problem you're trying to solve, especially if that problem is a social one.
 Especially when in many of these examples, the predictions the system produces have shown to _not_ be unbiased, but rather exacerbate existing 
@@ -220,5 +220,6 @@ track citizens.
 {: .challenge}
 
 [excavatingai]: https://www.excavating.ai
-
+[mbroussard]: https://merbroussard.github.io
+[artificialunintelligence]: https://mitpress.mit.edu/books/artificial-unintelligence
 {% include links.md %}

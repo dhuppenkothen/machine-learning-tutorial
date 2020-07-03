@@ -149,7 +149,7 @@ If our candies have lengths that are far away 1.5cm, then the function will pred
 >
 > In this challenge, we are going to write our own implementation of the logistic regression algorithm!
 > 
-> 1. First, download [the data](sweets_data) from the GitHub repository.
+> 1. First, download [the data][candy_data] from the GitHub repository.
 > 2. Load this data in whatever programming environment you use for data analysis (I use Python, so I would use
 > the Pandas library to load it).
 > 3. Take all rows that are either peanut or plain M&Ms, and store only those rows in a separate table (you can also pick another combination of two types of candy).
@@ -207,10 +207,11 @@ the classes at 0.5, and plot the $$\sigma(z) = 0.5$$ contour. This is, for this 
 > ## Plot Your Features
 >
 > Plotting different features against one another can help you learn about which features might improve your classification, 
-> and which ones won't. A useful visualization for this purpose is called a [_scatterplot matrix_](scatter) (also called a pairs plot or a
+> and which ones won't. A useful visualization for this purpose is called a [_scatterplot matrix_][scatter] (also called a pairs plot or a
 > corner plot). 
 >
 {: .callout}
 
+[candy_data]: https://github.com/dhuppenkothen/machine-learning-tutorial/tree/gh-pages/data
 [scatter]: https://seaborn.pydata.org/examples/scatterplot_matrix.html
 {% include links.md %}

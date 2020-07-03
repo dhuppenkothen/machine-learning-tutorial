@@ -16,7 +16,7 @@ keypoints:
 
 ### How do we approach the problem of sorting candy in practice? 
 
-If you look at the picture from [Episode 2](ep2), you probably notice some difference between the different types of candy. Humans tend to be very good at classification. Many of you can probably take one look at the picture and immediately recognize that some candy are different than others. You can make categories of different candy based on their appearance, and crucially, you probably don't even have to articulate *what* exactly is different about one sweet compared to another: you can just tell. This, of course, extends past the visual domain: I could give you different types of candy to touch, and you could tell the difference by touch, too.
+If you look at the picture from [Episode 2][ep2], you probably notice some difference between the different types of candy. Humans tend to be very good at classification. Many of you can probably take one look at the picture and immediately recognize that some candy are different than others. You can make categories of different candy based on their appearance, and crucially, you probably don't even have to articulate *what* exactly is different about one sweet compared to another: you can just tell. This, of course, extends past the visual domain: I could give you different types of candy to touch, and you could tell the difference by touch, too.
 
 Our ability to classify objects is trained from early childhood, and rests upon many hours of learning and experience. 
 A computer, on the other hand, generally operates according to *rules* and *models*. We need to tell it what to do!
@@ -46,7 +46,7 @@ in some way.
 > ## Challenge: Defining Features
 >
 > Let's take a look at the candy you've received at the start of the class (and have hopefully not eaten yet!).
-> If you have not received any candy, you can also do this exercise with the image from [Episode 2](ep2). 
+> If you have not received any candy, you can also do this exercise with the image from [Episode 2][ep2]. 
 >
 > Identify features of your candy and describe how you would measure them. Here are some helpful questions to get you started:
 >
@@ -83,13 +83,13 @@ for each is called a *label*.
 > ## Challenge: Recording training data
 > 
 > Let's now record some data in practice! If you don't have the candy or tools to record data, you can also 
-> use [this pre-recorded data set](candy_data) (when you get to that page, right-click on the file `candy_data_200611.tsv`, 
+> use [this pre-recorded data set][candy_data] (when you get to that page, right-click on the file `candy_data_200611.tsv`, 
 > and choose "download linked file" or the equivalent).
 >
 > Pick four features you think will do well at describing your candy, and record the value for ten candy of 
 > each class. 
 >
-> Hint: you can use any spreadsheet programme to record your data, or you can use [this template](candy_template). 
+> Hint: you can use any spreadsheet programme to record your data, or you can use [this template][candy_template]. 
 > The template is a `.tsv` file: this is a text file where each row corresponds to a sample, and each column 
 > to a feature. Columns are separated by tabs, hence the name (`tsv` stands for "tab-separated values").
 >

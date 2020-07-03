@@ -29,7 +29,7 @@ First, let's see how well our features separate different types of candy. We wil
 > 1. First, pick two of the features you defined and gathered data for in the previous lesson. 
 > 2. Now take a large sheet of paper, and draw two perpendicular axes. Label them according to the features you selected.
 > 3. Look at your data and find the minimum and maximum for each feature across all of our training data set, then label the axes such that it spans the full range of your data set.
-> 4. Place your different candies in different places on your graph, depending on their values of the features you selected. For this exercise, you don't need to identify each candy with the appropriate row: just place them approximately in the right place. If you don't have candies in front of you, you can look at the data from the last lesson in [this file](sweets_data), and mark on the paper where the candy should be.
+> 4. Place your different candies in different places on your graph, depending on their values of the features you selected. For this exercise, you don't need to identify each candy with the appropriate row: just place them approximately in the right place. If you don't have candies in front of you, you can look at the data from the last lesson in [this file][sweets_data], and mark on the paper where the candy should be.
 >
 > Now take some observational notes while you answer these questions:
 > * What do you see? Do your candies all end up in different corners of the graph? Are some of them squashed together? 
@@ -39,7 +39,7 @@ First, let's see how well our features separate different types of candy. We wil
 > >
 > > For this solution, I'm going to look at the length of a candy compared to its height. That is, if you let it lie
 > > on an even surface, I'm going to measure the longest horizontal axis, and the vertical axis away from the surface.
-> > The data gathered during the last lesson is available in [this file](sweets_data). 
+> > The data gathered during the last lesson is available in [this file][sweets_data]. 
 > > Now I'm going to draw two axes on a sheet of paper, and label them "length" and "height". My measurements are 
 > > in centimeters (cm). Looking at the data, I can see that the smallest value 
 > > in the "length" column is 1.1cm, and the largest is 2.3cm. So it makes sense to let the x-axis, where length is 
