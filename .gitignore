@@ -1,0 +1,6 @@
+# Generated Code from Jekyll
+.jekyll-cache/
+_site/
+
+# Mac System files
+.DS_Store
