@@ -109,6 +109,7 @@ M&Ms. Because what better way to learn statistics and machine learning through c
 >
 {: .challenge}
 
+[ahw]: http://astrohackweek.org/
 [ml2018]: https://github.com/AstroHackWeek/AstroHackWeek2018/tree/master/day3_machine_learning
 [ml2017]: https://github.com/AstroHackWeek/AstroHackWeek2017/tree/master/day1
 [mmpaper]: https://www.tandfonline.com/doi/full/10.1080/10691898.2019.1604106
